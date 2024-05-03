@@ -1,5 +1,5 @@
 {
-  "extends": "../tsconfig.base.json",
+  "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "jsx": "preserve",
     "allowJs": true,
@@ -23,8 +23,8 @@
     "**/*.tsx",
     "**/*.js",
     "**/*.jsx",
-    "../apps/.next/types/**/*.ts",
-    "../dist/apps/.next/types/**/*.ts",
+    "../../apps/PlanMyPlate/.next/types/**/*.ts",
+    "../../dist/apps/PlanMyPlate/.next/types/**/*.ts",
     "next-env.d.ts"
   ],
   "exclude": ["node_modules", "jest.config.ts", "**/*.spec.ts", "**/*.test.ts"]

@@ -1,7 +1,7 @@
 {
   "name": "PlanMyPlate",
-  "$schema": "../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/PlanMyPlate",
   "projectType": "application",
   "tags": [],
   "targets": {
@@ -12,9 +12,9 @@
       "executor": "@nx/js:swc",
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/apps",
-        "main": "apps/server/main.ts",
-        "tsConfig": "apps/tsconfig.server.json",
+        "outputPath": "dist/apps/PlanMyPlate",
+        "main": "apps/PlanMyPlate/server/main.ts",
+        "tsConfig": "apps/PlanMyPlate/tsconfig.server.json",
         "clean": false,
         "assets": []
       },

@@ -15,7 +15,9 @@ import next from 'next';
 // - The fallback `__dirname` is for production builds.
 // - Feel free to change this to suit your needs.
 
-const dir = process.env.NX_NEXT_DIR || path.join(__dirname, '../../../apps');
+const dir =
+  process.env.NX_NEXT_DIR ||
+  path.join(__dirname, '../../../../apps/PlanMyPlate');
 const dev = process.env.NODE_ENV === 'development';
 
 // HTTP Server options:
