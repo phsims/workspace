@@ -1,12 +1,8 @@
 {
   "extends": ["plugin:@nx/react", "../../.eslintrc.json"],
-  "ignorePatterns": ["!**/*","vite.config.ts"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
-      "parserOptions": {
-        "project": ["libs/components/tsconfig.*?.json"]
-      },
       "rules": {}
     },
     {
