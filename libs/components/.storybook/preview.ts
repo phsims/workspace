@@ -1,22 +1,20 @@
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
 import '@fontsource/material-icons';
+import "@fontsource/poppins"; 
+import "@fontsource/poppins/400.css"; 
+import "@fontsource/poppins/400-italic.css";
 
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import { withThemeFromJSXProvider } from '@storybook/addon-themes';
-import { oceanBreeze, sunsetGlow, earthyGreens } from '../src';
-
+import { purple, sunsetGlow, earthyGreens } from '../src';
 
 export const decorators = [
   withThemeFromJSXProvider({
     themes: {
-      oceanBreeze: oceanBreeze,
+      purple: purple,
       sunsetGlow: sunsetGlow,
       earthyGreens: earthyGreens,
     },
-    defaultTheme: 'oceanBreeze',
+    defaultTheme: 'purple',
     Provider: ThemeProvider,
     GlobalStyles: CssBaseline,
   }),

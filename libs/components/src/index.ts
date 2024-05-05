@@ -1,2 +1,2 @@
-export * from './lib/components';
-export * from './lib/themes'
+export * from './lib/organisms/header/header';
+export * from './lib/themes';
