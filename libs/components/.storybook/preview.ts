@@ -1,20 +1,21 @@
-import '@fontsource/material-icons';
-import "@fontsource/poppins"; 
-import "@fontsource/poppins/400.css"; 
-import "@fontsource/poppins/400-italic.css";
+
+
 
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import { withThemeFromJSXProvider } from '@storybook/addon-themes';
-import { purple, sunsetGlow, earthyGreens } from '../src';
+import  green  from '../src/lib/Themes/GreenThemeProvider/theme';
+import  purple from '../src/lib/Themes/PurpleThemeProvider/theme';
+import  pink from '../src/lib/Themes/PinkThemeProvider/theme';
+
 
 export const decorators = [
   withThemeFromJSXProvider({
     themes: {
       purple: purple,
-      sunsetGlow: sunsetGlow,
-      earthyGreens: earthyGreens,
+      pink: pink,
+      green: green,
     },
-    defaultTheme: 'purple',
+    defaultTheme: 'pink',
     Provider: ThemeProvider,
     GlobalStyles: CssBaseline,
   }),

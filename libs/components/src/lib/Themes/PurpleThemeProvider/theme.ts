@@ -1,7 +1,6 @@
 import { createTheme } from '@mui/material/styles';
 
-
-const purple = {
+const pallet = {
   primary: {
     main: '#4855fe', 
     contrastText: '#ffffff', 
@@ -22,35 +21,31 @@ const purple = {
     main: '#ff5a00', 
     contrastText: '#000000',
   },
-  background: {
-    default:  '#424242',
-    paper:  '#212121',
+  grey: {
+    light: '#f8f7f7',
+    main: '#f8f7f7',
+    dark: '#444245',
   },
 };
 
 
+
 const theme = createTheme({
   palette: {
-    primary: purple.primary,
-    secondary: purple.secondary,
-    success: purple.success,
-    error: purple.error,
-    warning: purple.warning,
-    // background: {
-    //   default:  '#424242',
-    //   paper:  '#212121',
-    // },
-    // text: {
-    //   primary: mode === 'dark' ? '#ffffff' : '#212121',
-    //   secondary: mode === 'dark' ? '#b3b3b3' : '#424242',
-    // },
+    primary: pallet.primary,
+    secondary: pallet.secondary,
+    success: pallet.success,
+    error: pallet.error,
+    warning: pallet.warning,
   },
   typography: {
     fontFamily:   "Poppins, Arial, sans-serif",
     fontSize: 14,
     h1: {
-      fontSize: '4rem',
-      fontWeight: 500,
+      fontSize: '4.5rem',
+      lineHeight:'6.75rem',
+      fontWeight: 800,
+      color: pallet.grey.dark,
     },
     h2: {
       fontSize: '2.5rem',
@@ -60,18 +55,15 @@ const theme = createTheme({
       fontSize: '1rem',
       fontWeight: 400,
     },
-    // button: {
-    //   textTransform: 'none', 
-    // },
   },
   components: {
-    // MuiButton: {
-    //   styleOverrides: {
-    //     root: {
-    //       borderRadius: 8, 
-    //     },
-    //   },
-    // },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          borderRadius: 8,
+        },
+      },
+    },
   },
 });
 

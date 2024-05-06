@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import Header from './Header';
+import Features from './Features';
 
-describe('Header', () => {
+describe('Features', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<Header />);
+    const { baseElement } = render(<Features />);
     expect(baseElement).toBeTruthy();
   });
 });

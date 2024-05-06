@@ -1,6 +1,6 @@
 import { Box, AppBar, Toolbar, IconButton, Typography, Button } from '@mui/material';
 import { MenuIcon } from '@storybook/icons';
-import styles from './header.module.css';
+
 
 /* eslint-disable-next-line */
 export interface HeaderProps {}
