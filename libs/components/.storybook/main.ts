@@ -1,31 +1,17 @@
-import type { StorybookConfig } from '@storybook/react-vite';
-
-import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
-import { mergeConfig } from 'vite';
-
+import type { StorybookConfig } from '@storybook/nextjs';
 
 const config: StorybookConfig = {
   stories: ['../src/lib/**/*.stories.@(js|jsx|ts|tsx|mdx)'],
   staticDirs: ['./assets'],
-  addons: ['@storybook/addon-essentials', '@storybook/addon-interactions','@storybook/addon-themes'],
+  addons: ['@storybook/addon-essentials', '@storybook/addon-interactions'],
   framework: {
-    name: '@storybook/react-vite',
+    name: '@storybook/nextjs',
     options: {},
   },
-
-  viteFinal: async (config) =>
-    mergeConfig(config, {
-      plugins: [nxViteTsPaths()],
-      server: {
-        fs: {
-          strict: false,
-        },
-      },
-    }),
 };
 
 export default config;
 
-// To customize your Vite configuration you can use the viteFinal field.
-// Check https://storybook.js.org/docs/react/builders/vite#configuration
+// To customize your webpack configuration you can use the webpackFinal field.
+// Check https://storybook.js.org/docs/react/builders/webpack#extending-storybooks-webpack-config
 // and https://nx.dev/recipes/storybook/custom-builder-configs

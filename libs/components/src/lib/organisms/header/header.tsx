@@ -22,7 +22,7 @@ export function Header(props: HeaderProps) {
           <Typography variant="h2" fontWeight='bold' component="div" sx={{ flexGrow: 1 }} >
             PlanMyPlate
           </Typography>
-          {/* <Button color="inherit">Login</Button> */}
+          <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
     </Box>

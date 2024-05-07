@@ -1,5 +1,5 @@
-export * from './lib/Organisms/Header/Header';
-export * from './lib/Organisms/xxxBanner/Banner';
-export * from './lib/Themes/PinkThemeProvider/PinkThemeProvider'
-export * from './lib/Themes/GreenThemeProvider/GreenThemeProvider'
-export * from './lib/Themes/PurpleThemeProvider/PurpleThemeProvider'
+// Use this file to export React client components (e.g. those with 'use client' directive) or other non-server utilities
+export * from  './lib/Organisms/Features/Features';
+export * from  './lib/Organisms/Header/Header';
+export * from  './lib/Organisms/RecipeCard/RecipeCard';
+export * from './lib/themes/ThemeProvider';

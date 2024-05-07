@@ -1,5 +1,6 @@
 {
   "extends": ["plugin:@nx/react", "../../.eslintrc.json"],
+  "ignorePatterns": ["!**/*", "storybook-static"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],

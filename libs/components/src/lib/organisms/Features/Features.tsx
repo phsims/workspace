@@ -1,4 +1,5 @@
 
+/* eslint-disable-next-line */
 export interface FeaturesProps {}
 
 export function Features(props: FeaturesProps) {

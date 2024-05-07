@@ -5,7 +5,9 @@
     "types": [
       "node",
       "@nx/react/typings/cssmodule.d.ts",
-      "@nx/react/typings/image.d.ts"
+      "@nx/react/typings/image.d.ts",
+      "next",
+      "@nx/next/typings/image.d.ts"
     ]
   },
   "exclude": [
@@ -19,9 +21,7 @@
     "src/**/*.spec.jsx",
     "src/**/*.test.jsx",
     "**/*.stories.ts",
-    "**/*.stories.js",
-    "**/*.stories.jsx",
-    "**/*.stories.tsx"
+    "**/*.stories.js"
   ],
   "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"]
 }

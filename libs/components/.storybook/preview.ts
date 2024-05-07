@@ -1,12 +1,8 @@
-
-
-
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import { withThemeFromJSXProvider } from '@storybook/addon-themes';
-import  green  from '../src/lib/Themes/GreenThemeProvider/theme';
-import  purple from '../src/lib/Themes/PurpleThemeProvider/theme';
-import  pink from '../src/lib/Themes/PinkThemeProvider/theme';
-
+import green from '../src/lib/themes/green';
+import purple from '../src/lib/themes/purple';
+import pink from '../src/lib/themes/pink';
 
 export const decorators = [
   withThemeFromJSXProvider({

@@ -1,0 +1,8 @@
+{
+  "name": "PlanMyPlate-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/plan-my-plate-e2e/src",
+  "implicitDependencies": ["PlanMyPlate"],
+  "// targets": "to see all targets run: nx show project PlanMyPlate-e2e --web",
+  "targets": {}
+}
