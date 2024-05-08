@@ -1,7 +1,11 @@
 'use client';
 
-import { createTheme } from '@mui/material/styles';
+import '@fontsource/poppins/400.css'
+import '@fontsource/poppins/500.css'
+import '@fontsource/poppins/600.css'
+import '@fontsource/material-icons';
 
+import { createTheme } from '@mui/material/styles';
 
 const pallet = {
   primary: {
@@ -32,7 +36,7 @@ const pallet = {
   },
   grey: {
     light: '#f8f7f7',
-    main: '#f8f7f7',
+    main: '#7d7c7c',
     dark: '#444245',
   },
 };
@@ -59,6 +63,7 @@ const theme = createTheme({
       fontWeight: 500,
     },
     body1: {
+      color: pallet.grey.main,
       fontSize: '1rem',
       fontWeight: 400,
     },
@@ -71,7 +76,7 @@ const theme = createTheme({
         },
       },
     },
-  }
+  },
 });
 
 export default theme;

@@ -19,7 +19,7 @@ export function Header(props: HeaderProps) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h2" fontWeight='bold' component="div" sx={{ flexGrow: 1 }} >
+          <Typography variant="h2"  component="div" sx={{ flexGrow: 1 }} >
             PlanMyPlate
           </Typography>
           <Button color="inherit">Login</Button>

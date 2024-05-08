@@ -7,7 +7,7 @@ import { Box } from '@mui/material';
 
 const meta: Meta<typeof RecipeCard> = {
   component: RecipeCard,
-  title: '@Organisms/RecipeCard',
+  title: '@organisms/RecipeCard',
   decorators: [
     (Story) => (
       <Box sx={{width:345}}>
