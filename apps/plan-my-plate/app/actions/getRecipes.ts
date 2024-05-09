@@ -1,7 +1,7 @@
 'use server';
 
 import { getConfig } from '../utils/config';
-import { data as mockData} from '../mocks/recipesData';
+import { data as mockData} from '../__mocks__/recipesData';
 
 const { baseUrl, headers } = getConfig();
 export async function getRecipes() {
