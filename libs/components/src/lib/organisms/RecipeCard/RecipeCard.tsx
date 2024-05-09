@@ -1,3 +1,5 @@
+import Image from 'next/image';
+import DOMPurify from "isomorphic-dompurify";
 import {
   Card,
   CardMedia,
@@ -5,6 +7,7 @@ import {
   Typography,
   CardActions,
   Button,
+  Box,
 } from '@mui/material';
 
 
@@ -16,24 +19,35 @@ export interface RecipeCardProps {
 }
 
 export function RecipeCard({ image, title, summary }: RecipeCardProps) {
-  const content = `${summary.substring(0, 70)}...`;
 
+  const content = DOMPurify.sanitize(`${summary.substring(0, 70)}...`);
   return (
     <Card>
-      <CardMedia sx={{ height: 140 }} image={image} title={title} />
+       <Box sx={{ position: 'relative', width: '100%', height: '140px' }}>
+      <Image
+        src={image}
+        alt={title}
+        sizes="300px"
+        fill
+        style={{
+          objectFit: 'cover',
+        }}
+      />
+    </Box>
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography gutterBottom variant="h5">
           {title}
         </Typography>
         <Typography
           variant="body2"
           color="text.secondary"
-        > <div dangerouslySetInnerHTML={{ __html: content }} /></Typography>
+          dangerouslySetInnerHTML={{ __html:  content }}
+        />
       </CardContent>
-      <CardActions>
+      {/* <CardActions>
         <Button size="small">Share</Button>
         <Button size="small">Learn More</Button>
-      </CardActions>
+      </CardActions> */}
     </Card>
   );
 }

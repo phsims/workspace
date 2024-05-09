@@ -30,7 +30,7 @@
     "../../dist/apps/plan-my-plate/.next/types/**/*.ts",
     "next-env.d.ts",
     ".next/types/**/*.ts"
-, "../../libs/components/src/lib/themes/purple.ts"  ],
+, "../../libs/components/src/lib/themes/purple.ts", "../../libs/components/src/lib/utils/purify.ts"  ],
   "exclude": [
     "node_modules",
     "jest.config.ts",

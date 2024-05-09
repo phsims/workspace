@@ -12,6 +12,19 @@ const nextConfig = {
     // See: https://github.com/gregberge/svgr
     svgr: false,
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "img.spoonacular.com",
+      },
+    ],
+  },
+  experimental: {
+    serverActions: {
+      allowedOrigins: ['api.spoonacular.com'],
+    },
+  },
 };
 
 const plugins = [
