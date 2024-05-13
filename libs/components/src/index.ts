@@ -1,3 +1,4 @@
+export * from './lib/atoms/ButtonLink/ButtonLink';
 export * from './lib/organisms/Banner/Banner';
 export * from './lib/organisms/Features/Features';
 export * from './lib/organisms/Header/Header';
