@@ -4,7 +4,7 @@
   "sourceRoot": "apps/plan-my-plate",
   "projectType": "application",
   "tags": [],
+  "implicitDependencies": [],
   "// targets": "to see all targets run: nx show project PlanMyPlate --web",
-  "targets": {},
-  "implicitDependencies": ["components"]
+  "targets": {}
 }

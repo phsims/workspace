@@ -2,11 +2,8 @@ import Image from 'next/image';
 import DOMPurify from "isomorphic-dompurify";
 import {
   Card,
-  CardMedia,
   CardContent,
   Typography,
-  CardActions,
-  Button,
   Box,
 } from '@mui/material';
 

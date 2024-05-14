@@ -1,13 +1,13 @@
 'use server';
 
 import { getConfig } from '../utils/config';
-import { data as mockData} from '../__mocks__/recipesData';
+import { mockRecipes} from '../__mocks__/recipesData';
 
 const { baseUrl, headers } = getConfig();
 export async function getRecipes() {
   const env = process.env.NODE_ENV;
   if (env == 'development') {
-    return mockData;
+    return mockRecipes;
   }
   try {
     const res = await fetch(`${baseUrl}/recipes/random?number=10`, {

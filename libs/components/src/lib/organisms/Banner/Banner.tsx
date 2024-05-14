@@ -1,4 +1,4 @@
-import { Box, Container, Grid } from '@mui/material';
+import { Box, Container } from '@mui/material';
 import { ReactNode } from 'react';
 
 export interface BannerProps {
