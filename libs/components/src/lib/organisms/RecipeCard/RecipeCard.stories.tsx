@@ -10,7 +10,7 @@ const meta: Meta<typeof RecipeCard> = {
   title: '@organisms/RecipeCard',
   decorators: [
     (Story) => (
-      <Box sx={{width:345}}>
+      <Box sx={{width:345,}}>
         <Story />
       </Box>
     ),

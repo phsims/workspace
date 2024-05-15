@@ -1,9 +1,10 @@
-import { Button, Link } from '@mui/material';
-
+import { Button } from '@mui/material';
+import router from 'next/router';
+import { ReactNode } from 'react';
 
 export interface ButtonLinkProps {
   text: string;
-  link:string,
+  link: string;
   variant?: 'text' | 'outlined' | 'contained';
   color?:
     | 'primary'
@@ -13,20 +14,22 @@ export interface ButtonLinkProps {
     | 'error'
     | 'info'
     | 'warning';
+  endIcon?: ReactNode;
+  startIcon?: ReactNode;
 }
 
 export function ButtonLink({
   text,
   link,
-  variant='contained',
+  variant = 'contained',
   color = 'primary',
+  endIcon,
+  startIcon
 }: ButtonLinkProps) {
   return (
-    <Link href={link}>
-      <Button variant={variant} color={color}>
-        {text}
-      </Button>
-    </Link>
+    <Button variant={variant} color={color} startIcon={startIcon} endIcon={endIcon} onClick={() => router.push(link)} >
+      {text}
+    </Button>
   );
 }
 
