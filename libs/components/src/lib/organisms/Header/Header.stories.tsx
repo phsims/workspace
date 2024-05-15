@@ -6,17 +6,23 @@ import { expect } from '@storybook/jest';
 
 const meta: Meta<typeof Header> = {
   component: Header,
-  title: 'Header',
+  title: '@organisms/Header',
 };
 export default meta;
 type Story = StoryObj<typeof Header>;
 
 export const Primary = {
-  args: {},
+  args: {
+    title:'My cool app',
+    headerNav:[
+      { link: '/link1', text: 'link 1' },
+      { link: '/link2', text: 'link 2' },
+    ]
+  },
 };
 
 export const Heading: Story = {
-  args: {},
+  args: {...Primary.args},
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     expect(canvas.getByText(/Welcome to Header!/gi)).toBeTruthy();

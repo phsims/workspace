@@ -1,26 +1,37 @@
 'use client';
 
 import { createTheme } from '@mui/material/styles';
+import {typography} from './typography'
 
 const pallet = {
   primary: {
-    main: '#4855fe',
+    light: '#a7d7c5',
+    main: '#75a478',
+    dark: '#487a5a',
     contrastText: '#ffffff',
   },
   secondary: {
-    main: '#ffe537',
+    light: '#f6e2c0',
+    main: '#e9b899',
+    dark: '#ba8374',
     contrastText: '#000000',
   },
   success: {
-    main: '#00e900',
+    light: '#b9e4c9',
+    main: '#88c199',  
+    dark: '#5b8b67',
     contrastText: '#ffffff',
   },
   error: {
-    main: '#fe4854',
-    contrastText: '#000000',
+    light: '#e57373',
+    main: '#f44336',  
+    dark: '#d32f2f',
+    contrastText: '#ffffff',
   },
   warning: {
-    main: '#ff5a00',
+    light: '#ffb74d',
+    main: '#ffa726',  
+    dark: '#f57c00',
     contrastText: '#000000',
   },
   grey: {
@@ -29,6 +40,7 @@ const pallet = {
     dark: '#444245',
   },
 };
+
 
 const theme = createTheme({
   palette: {
@@ -42,18 +54,16 @@ const theme = createTheme({
     fontFamily: 'Poppins, Arial, sans-serif',
     fontSize: 14,
     h1: {
-      fontSize: '4.5rem',
-      lineHeight: '6.75rem',
-      fontWeight: 800,
+      ...typography.h1,
       color: pallet.grey.dark,
     },
     h2: {
-      fontSize: '2.5rem',
+      ...typography.h2,
       fontWeight: 500,
     },
     body1: {
-      fontSize: '1rem',
-      fontWeight: 400,
+      color: pallet.grey.main,
+      ...typography.body1,
     },
   },
   components: {
@@ -65,6 +75,6 @@ const theme = createTheme({
       },
     },
   },
-})
+});
 
 export default theme;

@@ -6,6 +6,7 @@ import '@fontsource/poppins/600.css'
 
 
 import { createTheme } from '@mui/material/styles';
+import {typography} from './typography'
 
 const pallet = {
   primary: {
@@ -53,19 +54,16 @@ const theme = createTheme({
     fontFamily: 'Poppins, Arial, sans-serif',
     fontSize: 14,
     h1: {
-      fontSize: '4.5rem',
-      lineHeight: '6.75rem',
-      fontWeight: 600,
+      ...typography.h1,
       color: pallet.grey.dark,
     },
     h2: {
-      fontSize: '2.5rem',
+      ...typography.h2,
       fontWeight: 500,
     },
     body1: {
       color: pallet.grey.main,
-      fontSize: '1rem',
-      fontWeight: 400,
+      ...typography.body1,
     },
   },
   components: {
