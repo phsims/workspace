@@ -43,7 +43,7 @@ export function Header({
       <AppBar
         position="static"
         color="transparent"
-        sx={{ padding: 0, flexGrow: 1 }}
+        sx={{ padding: ' 1rem 0', flexGrow: 1 }}
       >
         <Container>
           <Toolbar>

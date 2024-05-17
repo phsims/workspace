@@ -2,6 +2,7 @@
 
 import { createTheme } from '@mui/material/styles';
 import {typography} from './typography'
+import { styleOverrides } from './overrides';
 
 const pallet = {
   primary: {
@@ -66,15 +67,7 @@ const theme = createTheme({
       ...typography.body1,
     },
   },
-  components: {
-    MuiButton: {
-      styleOverrides: {
-        root: {
-          borderRadius: 8,
-        },
-      },
-    },
-  },
+  ...styleOverrides
 });
 
 export default theme;
