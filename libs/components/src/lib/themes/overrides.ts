@@ -6,10 +6,18 @@ export const styleOverrides = {
           borderRadius: '4rem',
           padding: '1rem 2rem',
         },
-        sizeLarge: {
+        sizeSmall: {
             padding: '0.5rem 1rem'
           }
       },
     },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          borderRadius: '1.5rem',
+        },
+      },
+    },
+    
   },
 };

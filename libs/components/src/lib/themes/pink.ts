@@ -4,7 +4,7 @@ import '@fontsource/poppins/400.css'
 import '@fontsource/poppins/500.css'
 import '@fontsource/poppins/600.css'
 
-
+import { Color } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
 import {typography} from './typography'
 import { styleOverrides } from './overrides';
@@ -50,10 +50,11 @@ const theme = createTheme({
     success: pallet.success,
     error: pallet.error,
     warning: pallet.warning,
+    grey: { ...pallet.grey } as Partial<Color>,
   },
   typography: {
     fontFamily: 'Poppins, Arial, sans-serif',
-    fontSize: 14,
+    
     h1: {
       ...typography.h1,
       color: pallet.grey.dark,

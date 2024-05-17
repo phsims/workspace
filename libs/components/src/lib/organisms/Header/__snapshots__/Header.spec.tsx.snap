@@ -39,7 +39,7 @@ exports[`Header should match  snapshot 1`] = `
             type="button"
           >
             <div
-              class="MuiTypography-root MuiTypography-h2 css-1brsxfg-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h2 css-gi57be-MuiTypography-root"
             >
               My cool app
             </div>

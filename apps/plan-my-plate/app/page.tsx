@@ -1,17 +1,21 @@
 'use client';
 import Image from 'next/image';
 import { Box, Grid, Typography } from '@mui/material';
-import {  Banner, ButtonLink } from '@workspace/components';
+import { Banner, ButtonLink } from '@workspace/components';
+import { FeatureCard, FeatureCardProps } from '@workspace/components';
+
+import { features } from './__fixtures__/features';
 
 export default function Index() {
   return (
     <>
-      <Banner background="grey.light">
+      <Banner>
         <Grid
           container
           spacing={{ xs: 2, md: 3 }}
           columns={{ xs: 1, sm: 2 }}
           sx={{ alignItems: 'center' }}
+          direction={{ xs: 'column-reverse', md: 'row' }}
         >
           <Grid item md={2} xs={1}>
             <Typography variant="h1" mb={5}>
@@ -35,6 +39,7 @@ export default function Index() {
                 width: '100%',
                 mt: 5,
               }}
+              flexDirection={{ xs: 'column', md: 'row' }}
             >
               <ButtonLink
                 variant="contained"
@@ -64,6 +69,20 @@ export default function Index() {
               }}
             />
           </Grid>
+        </Grid>
+      </Banner>
+      <Banner background="grey.light">
+        <Grid
+          container
+          spacing={{ xs: 2, md: 3 }}
+          columns={{ xs: 1, sm: 4 }}
+          sx={{ alignItems: 'stretch', }}
+        >
+          {features.map((feature: FeatureCardProps, index: number) => (
+            <Grid item md={4} xs={1} key={index} sx={{ display: 'flex' }}>
+              <FeatureCard {...feature} />
+            </Grid>
+          ))}
         </Grid>
       </Banner>
     </>

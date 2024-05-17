@@ -383,49 +383,6 @@ export const mockRecipes ={
         spoonacularScore: 36.15742492675781,
         spoonacularSourceUrl: 'https://spoonacular.com/eggless-blueberry-and-white-chocolate-baked-cheesecake-642259'
       },
-      {
-        vegetarian: true,
-        vegan: true,
-        glutenFree: true,
-        dairyFree: true,
-        veryHealthy: false,
-        cheap: false,
-        veryPopular: false,
-        sustainable: false,
-        lowFodmap: false,
-        weightWatcherSmartPoints: 3,
-        gaps: 'no',
-        preparationMinutes: -1,
-        cookingMinutes: -1,
-        aggregateLikes: 18,
-        healthScore: 18,
-        creditsText: 'Foodista.com – The Cooking Encyclopedia Everyone Can Edit',
-        license: 'CC BY 3.0',
-        sourceName: 'Foodista',
-        pricePerServing: 64.81,
-        extendedIngredients: [Array],
-        id: 642660,
-        title: 'Fennel and Orange Salad With Toasted Hazelnuts and Cranberries',
-        readyInMinutes: 45,
-        servings: 4,
-        sourceUrl: 'https://www.foodista.com/recipe/4J3YBFD6/fennel-and-orange-salad-with-toasted-hazelnuts-and-cranberries',
-        image: 'https://img.spoonacular.com/recipes/642660-556x370.jpg',
-        imageType: 'jpg',
-        summary: `The recipe Fennel and Orange Salad With Toasted Hazelnuts and Cranberries can be made <b>in about 45 minutes</b>. This recipe serves 4 and costs 65 cents per serving. One serving contains <b>167 calories</b>, <b>2g of protein</b>, and <b>12g of fat</b>. A mixture of navel orange, cranberries, white-wine vinegar, and a handful of other ingredients are all it takes to make this recipe so tasty. It works well as a hor d'oeuvre. 18 people were impressed by this recipe. <b>Christmas</b> will be even more special with this recipe. It is a good option if you're following a <b>gluten free, dairy free, paleolithic, and lacto ovo vegetarian</b> diet. It is brought to you by Foodista. With a spoonacular <b>score of 68%</b>, this dish is pretty good. <a href="https://spoonacular.com/recipes/baby-spinach-salad-with-pears-red-onions-cranberries-and-toasted-hazelnuts-201726">Baby Spinach Salad with Pears, Red Onions, Cranberries and Toasted Hazelnuts</a>, <a href="https://spoonacular.com/recipes/blood-orange-salad-with-shaved-fennel-and-hazelnuts-51144">Blood Orange Salad With Shaved Fennel And Hazelnuts</a>, and <a href="https://spoonacular.com/recipes/fennel-orange-salad-with-toasted-pistachios-43207">Fennel & Orange Salad With Toasted Pistachios</a> are very similar to this recipe.`,
-        cuisines: [],
-        dishTypes: [Array],
-        diets: [Array],
-        occasions: [Array],
-        instructions: 'Finely grate enough zest from the orange to measure 1/2 tablespoon. Cut peel, including all white pith, from the orange with a paring knife. Then cut segments free from membranes.\n' +
-          'Cut out and discard core of fennel bulb, then cut bulbs crosswise into very thin slices, as thin as you can get them.\n' +
-          'Whisk together vinegar, zest, salt, and pepper in a small bowl until salt is dissolved, then add olive oil slowly in a stream, whisking until combined well.\n' +
-          'Toast hazelnuts on medium heat on a dry skillet.\n' +
-          'Toss fennel and oranges with vinaigrette in a large bowl until combined well.\n' +
-          'Top with toasted hazelnuts and dried cranberries. Garnish with a few fennel fronds.',
-        analyzedInstructions: [Array],
-        originalId: null,
-        spoonacularScore: 77.57572937011719,
-        spoonacularSourceUrl: 'https://spoonacular.com/fennel-and-orange-salad-with-toasted-hazelnuts-and-cranberries-642660'
-      }
+     
     ]
   }

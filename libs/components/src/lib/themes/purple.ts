@@ -1,5 +1,10 @@
 'use client';
 
+import '@fontsource/poppins/400.css'
+import '@fontsource/poppins/500.css'
+import '@fontsource/poppins/600.css'
+
+import { Color } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
 import {typography} from './typography'
 import { styleOverrides } from './overrides';
@@ -30,6 +35,7 @@ const pallet = {
     main: '#f8f7f7',
     dark: '#444245',
   },
+  white: '#ffffff',
 };
 
 const theme = createTheme({
@@ -39,6 +45,7 @@ const theme = createTheme({
     success: pallet.success,
     error: pallet.error,
     warning: pallet.warning,
+    grey: { ...pallet.grey } as Partial<Color>,
   },
   typography: {
     fontFamily: 'Poppins, Arial, sans-serif',

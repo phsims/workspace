@@ -8,7 +8,7 @@ export interface BannerProps {
 
 export function Banner({
   children,
-  background = 'primary.light',
+  background = 'white',
 }: BannerProps) {
   return (
     <Box sx={{ bgcolor: background, padding: { xs: 4, md: 8 } }}>

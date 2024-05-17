@@ -4,48 +4,65 @@ exports[`FeatureCard should match snapshot successfully 1`] = `
 <body>
   <div>
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-kh89si-MuiPaper-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-1ji417g-MuiPaper-root-MuiCard-root"
     >
-      <img
-        alt="Sample Title"
-        class="MuiBox-root css-ejus2b"
-        src="https://via.placeholder.com/150"
-      />
-      <h5
-        class="MuiTypography-root MuiTypography-h5 css-1himrsc-MuiTypography-root"
+      <div
+        class="MuiBox-root css-vkeyl2"
       >
-        Sample Title
-      </h5>
-      <p
-        class="MuiTypography-root MuiTypography-body1 css-z2eky3-MuiTypography-root"
-      >
-        This is a sample description.
-      </p>
-      <button
-        class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-azzldy-MuiButtonBase-root-MuiButton-root"
-        tabindex="0"
-        type="button"
-      >
-        Learn more
-        <span
-          class="MuiButton-icon MuiButton-endIcon MuiButton-iconSizeMedium css-9tj150-MuiButton-endIcon"
-        >
-          <svg
-            aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
-            data-testid="ArrowForwardIosRoundedIcon"
-            focusable="false"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M7.38 21.01c.49.49 1.28.49 1.77 0l8.31-8.31c.39-.39.39-1.02 0-1.41L9.15 2.98c-.49-.49-1.28-.49-1.77 0s-.49 1.28 0 1.77L14.62 12l-7.25 7.25c-.48.48-.48 1.28.01 1.76"
-            />
-          </svg>
-        </span>
-        <span
-          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+        <img
+          alt="Sample Title"
+          data-nimg="fill"
+          decoding="async"
+          loading="lazy"
+          sizes="270px"
+          src="/_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F150&w=3840&q=75"
+          srcset="/_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F150&w=16&q=75 16w, /_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F150&w=32&q=75 32w, /_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F150&w=48&q=75 48w, /_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F150&w=64&q=75 64w, /_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F150&w=96&q=75 96w, /_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F150&w=128&q=75 128w, /_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F150&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F150&w=384&q=75 384w, /_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F150&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F150&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F150&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F150&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F150&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F150&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F150&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fvia.placeholder.com%2F150&w=3840&q=75 3840w"
+          style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
         />
-      </button>
+      </div>
+      <div
+        class="MuiCardContent-root css-1eox0ct-MuiCardContent-root"
+      >
+        <h5
+          class="MuiTypography-root MuiTypography-h5 css-1himrsc-MuiTypography-root"
+        >
+          Sample Title
+        </h5>
+        <p
+          class="MuiTypography-root MuiTypography-body1 css-1wczmbf-MuiTypography-root"
+        >
+          This is a sample description.
+        </p>
+      </div>
+      <div
+        class="MuiCardActions-root MuiCardActions-spacing css-13rhmik-MuiCardActions-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-azzldy-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          Learn more
+          <span
+            class="MuiButton-icon MuiButton-endIcon MuiButton-iconSizeMedium css-9tj150-MuiButton-endIcon"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+              data-testid="ArrowForwardIosRoundedIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7.38 21.01c.49.49 1.28.49 1.77 0l8.31-8.31c.39-.39.39-1.02 0-1.41L9.15 2.98c-.49-.49-1.28-.49-1.77 0s-.49 1.28 0 1.77L14.62 12l-7.25 7.25c-.48.48-.48 1.28.01 1.76"
+              />
+            </svg>
+          </span>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
     </div>
   </div>
 </body>

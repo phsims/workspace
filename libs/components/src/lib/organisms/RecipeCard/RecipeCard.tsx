@@ -15,7 +15,7 @@ export interface RecipeCardProps {
 export function RecipeCard({ image, title, summary ,link}: RecipeCardProps) {
   const content = DOMPurify.sanitize(`${summary.substring(0, 70)}...`);
   return (
-    <Card>
+    <Card sx={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
       <Box sx={{ position: 'relative', width: '100%', height: '140px' }}>
         <Image
           src={image}
@@ -37,7 +37,9 @@ export function RecipeCard({ image, title, summary ,link}: RecipeCardProps) {
           dangerouslySetInnerHTML={{ __html: content }}
         />
       </CardContent>
-      <CardActions>
+
+
+      <CardActions sx={{ mt: 'auto' }}>
         <ButtonLink text='Go to recipe' link={link} variant='text'size='small' endIcon={<ArrowForwardIosRoundedIcon/>} />
       </CardActions>
     </Card>

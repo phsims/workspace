@@ -14,7 +14,7 @@ export const decorators = [
         pink: pink,
         green: green,
     },
-    defaultTheme: 'purple',
+    defaultTheme: 'pink',
     Provider: ThemeProvider,
     GlobalStyles: CssBaseline,
   }),

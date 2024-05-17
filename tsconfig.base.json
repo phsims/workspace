@@ -17,7 +17,6 @@
     "paths": {
       "@workspace/components": ["libs/components/src/index.ts"],
       "@workspace/components/server": ["libs/components/src/server.ts"],
-      "@workspace/themes": ["themes/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

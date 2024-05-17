@@ -80,7 +80,6 @@ export function Header({
                 sx={{
                   flexGrow: 1,
                   color: titleColor,
-                  fontSize: '2rem',
                   textTransform: 'capitalize',
                 }}
               >
