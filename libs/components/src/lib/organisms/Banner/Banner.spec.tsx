@@ -5,7 +5,7 @@ import Banner from './Banner';
 describe('Banner', () => {
   it('should render successfully', () => {
     const { baseElement } = render(
-      <Banner leftContent={undefined} rightContent={undefined} />
+      <Banner ><p>stuff goes here</p></Banner>
     );
     expect(baseElement).toBeTruthy();
   });

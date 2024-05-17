@@ -1,7 +1,14 @@
 import { fireEvent, render } from '@testing-library/react';
+import router from 'next/router';
 
 import Header, { HeaderProps } from './Header';
 
+
+
+// Mock the next router
+jest.mock('next/router', () => ({
+  push: jest.fn(),
+}));
 describe('Header', () => {
   const headerProps: HeaderProps = {
     title: 'My cool app',
@@ -37,4 +44,16 @@ describe('Header', () => {
       expect(getByText(text)).toBeInTheDocument();
     });
   });
+  it('should navigate to the correct link when a navigation link is clicked', () => {
+    const { getByLabelText, getByText } = render(<Header {...headerProps} />);
+    const menuButton = getByLabelText('menu');
+    fireEvent.click(menuButton);
+
+    headerProps.headerNav.forEach(({ text, link }) => {
+      const linkElement = getByText(text);
+      fireEvent.click(linkElement);
+
+      expect(router.push).toHaveBeenCalledWith(link);
+    });
+  })
 });

@@ -19,11 +19,11 @@ describe('Recipes', () => {
   it('renders recipe cards', async () => {
     const { getByText } = render(await Recipes());
     await waitFor(() => {
-      expect(getByText('My Asian Calamari')).toBeDefined();
+      expect(getByText('My Asian Calamari')).toBeInTheDocument();
       expect(
         getByText('Artisan Farfalle Pasta With Smoked Salmon and Cream Sauce')
-      ).toBeDefined();
-      expect(getByText('Quick and Easy Caprese Salad')).toBeDefined();
+      ).toBeInTheDocument();
+      expect(getByText('Quick and Easy Caprese Salad')).toBeInTheDocument();
     });
   });
 });

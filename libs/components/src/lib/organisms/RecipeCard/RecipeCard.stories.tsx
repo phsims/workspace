@@ -37,6 +37,6 @@ export const Heading: Story = {
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    expect(canvas.getByText(/Welcome to RecipeCard!/gi)).toBeTruthy();
+    expect(canvas.getByText(/Lizard/gi)).toBeInTheDocument();
   },
 };

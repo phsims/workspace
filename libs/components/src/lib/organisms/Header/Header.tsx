@@ -1,27 +1,26 @@
-import Link from 'next/link';
+
+"use client"
 import { usePathname } from 'next/navigation';
+import router from 'next/router';
 import {
   Box,
   AppBar,
   Toolbar,
   IconButton,
   Typography,
-  Button,
   Drawer,
-  ListItem,
   ListItemButton,
-  ListItemText,
+  MenuList,
 } from '@mui/material';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import { useState } from 'react';
-import router from 'next/router';
+
 
 interface NavProps {
   link: string;
   text: string;
 }
 
-/* eslint-disable-next-line */
 export interface HeaderProps {
   headerNav: NavProps[];
   title: string;
@@ -43,12 +42,8 @@ export function Header({
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar
-          position="static"
-          color="transparent"
-          sx={{ padding: 0}}
-        >
-          <Toolbar> 
+        <AppBar position="static" color="transparent" sx={{ padding: 0 }}>
+          <Toolbar>
             {headerNav && (
               <IconButton
                 edge="start"
@@ -57,13 +52,13 @@ export function Header({
                 sx={{ mr: 2 }}
                 onClick={toggleDrawer(true)}
               >
-                <MenuRoundedIcon sx={{ height:'28px', width:'28px' }} />
+                <MenuRoundedIcon sx={{ height: '28px', width: '28px' }} />
               </IconButton>
             )}
             <Typography
               variant="h2"
               component="div"
-              sx={{ flexGrow: 1, color: titleColor, fontSize:'2rem' }}
+              sx={{ flexGrow: 1, color: titleColor, fontSize: '2rem' }}
             >
               {title}
             </Typography>
@@ -72,15 +67,13 @@ export function Header({
       </Box>
       {headerNav && (
         <Drawer open={open} onClose={toggleDrawer(false)}>
-          {headerNav.map(({ link, text }) => (
-            <li>
-              <ListItem key={text} disablePadding>
-                <ListItemButton onClick={() => router.push(link)}>
-                  <ListItemText primary={text} />
-                </ListItemButton>
-              </ListItem>
-            </li>
-          ))}
+          <MenuList dense sx={{ width: 320 }}>
+            {headerNav.map(({ link, text }) => (
+              <ListItemButton key={text} onClick={() => router.push(link)}>
+                {text}
+              </ListItemButton>
+            ))}
+          </MenuList>
         </Drawer>
       )}
     </>

@@ -25,6 +25,6 @@ export const Heading: Story = {
   args: {...Primary.args},
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    expect(canvas.getByText(/Welcome to Header!/gi)).toBeTruthy();
+    expect(canvas.getByText(/My cool app /gi)).toBeInTheDocument();
   },
 };

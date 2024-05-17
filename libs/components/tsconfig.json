@@ -5,7 +5,9 @@
     "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
     "strict": true,
-    "composite": true
+    "composite": true,
+    "declaration": true,
+    "types": ["@testing-library/jest-dom"],
   },
   "files": [],
   "include": ["../../setupTests.ts"],
