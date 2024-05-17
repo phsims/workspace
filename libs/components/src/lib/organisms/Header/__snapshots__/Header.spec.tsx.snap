@@ -3,11 +3,11 @@
 exports[`Header should match  snapshot 1`] = `
 <body>
   <div>
-    <div
-      class="MuiBox-root css-i9gxme"
+    <header
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorTransparent MuiAppBar-positionStatic css-lkclok-MuiPaper-root-MuiAppBar-root"
     >
-      <header
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorTransparent MuiAppBar-positionStatic css-mwyi4r-MuiPaper-root-MuiAppBar-root"
+      <div
+        class="MuiContainer-root MuiContainer-maxWidthLg css-1oqqzyl-MuiContainer-root"
       >
         <div
           class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-hyum1k-MuiToolbar-root"
@@ -39,8 +39,8 @@ exports[`Header should match  snapshot 1`] = `
             My cool app
           </div>
         </div>
-      </header>
-    </div>
+      </div>
+    </header>
   </div>
 </body>
 `;

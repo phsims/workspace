@@ -1,18 +1,21 @@
+import { useRouter } from 'next-router-mock';
+import mockRouter from 'next-router-mock';
 import { fireEvent, render } from '@testing-library/react';
 import ButtonLink, { ButtonLinkProps } from './ButtonLink';
-import router from 'next/router';
 
-jest.mock('next/router', () => ({
-  push: jest.fn(),
-}));
+const defaultProps: ButtonLinkProps = {
+  text: 'Click Me',
+  link: '/test-page',
+  variant: 'contained',
+  color: 'primary',
+};
+
+jest.mock('next/navigation', () => require('next-router-mock'));
 
 describe('ButtonLink component', () => {
-  const defaultProps: ButtonLinkProps = {
-    text: 'Click Me',
-    link: '/test-page',
-    variant: 'contained',
-    color: 'primary',
-  };
+  beforeEach(() => {
+    mockRouter.push('/');
+  });
 
   it('should match snapshot', () => {
     const { baseElement } = render(
@@ -44,7 +47,11 @@ describe('ButtonLink component', () => {
     const button = getByRole('button', { name: /click me/i });
     fireEvent.click(button);
 
-    expect(router.push).toHaveBeenCalledWith('/test-page');
+    expect(mockRouter).toMatchObject({
+      asPath: '/test-page',
+      pathname: '/test-page',
+      query: {},
+    });
   });
 
   it('should render with startIcon and endIcon', () => {

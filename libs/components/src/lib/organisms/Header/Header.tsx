@@ -1,5 +1,4 @@
-
-"use client"
+'use client';
 import { usePathname } from 'next/navigation';
 import router from 'next/router';
 import {
@@ -11,14 +10,14 @@ import {
   Drawer,
   ListItemButton,
   MenuList,
+  Container,
 } from '@mui/material';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import { useState } from 'react';
 
-
 interface NavProps {
-  link: string;
-  text: string;
+  href: string;
+  label: string;
 }
 
 export interface HeaderProps {
@@ -41,8 +40,12 @@ export function Header({
 
   return (
     <>
-      <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static" color="transparent" sx={{ padding: 0 }}>
+      <AppBar
+        position="static"
+        color="transparent"
+        sx={{ padding: 0, flexGrow: 1 }}
+      >
+        <Container>
           <Toolbar>
             {headerNav && (
               <IconButton
@@ -63,14 +66,14 @@ export function Header({
               {title}
             </Typography>
           </Toolbar>
-        </AppBar>
-      </Box>
+        </Container>
+      </AppBar>
       {headerNav && (
         <Drawer open={open} onClose={toggleDrawer(false)}>
           <MenuList dense sx={{ width: 320 }}>
-            {headerNav.map(({ link, text }) => (
-              <ListItemButton key={text} onClick={() => router.push(link)}>
-                {text}
+            {headerNav.map(({ href, label }) => (
+              <ListItemButton key={label} onClick={() => router.push(href)}>
+                {label}
               </ListItemButton>
             ))}
           </MenuList>

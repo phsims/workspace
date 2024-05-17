@@ -1,14 +1,20 @@
 import { render } from '@testing-library/react';
+import { useRouter } from 'next-router-mock';
+import mockRouter from 'next-router-mock';
 
 import FeatureCard, { FeatureCardProps } from './FeatureCard';
 
-describe('FeatureCard', () => {
   const defaultProps: FeatureCardProps = {
     title: 'Sample Title',
     description: 'This is a sample description.',
     image: 'https://via.placeholder.com/150',
     link: '/sample-link',
   };
+
+  jest.mock('next/navigation', () => require('next-router-mock'));
+
+describe('FeatureCard', () => {
+
   it('should match snapshot successfully', () => {
     const { baseElement } = render(<FeatureCard {...defaultProps} />);
     expect(baseElement).toMatchSnapshot();

@@ -3,21 +3,18 @@ import router from 'next/router';
 
 import Header, { HeaderProps } from './Header';
 
-
-
+const headerProps: HeaderProps = {
+  title: 'My cool app',
+  headerNav: [
+    { href: '/link1', label: 'link 1' },
+    { href: '/link2', label: 'link 2' },
+  ],
+};
 // Mock the next router
 jest.mock('next/router', () => ({
   push: jest.fn(),
 }));
 describe('Header', () => {
-  const headerProps: HeaderProps = {
-    title: 'My cool app',
-    headerNav: [
-      { link: '/link1', text: 'link 1' },
-      { link: '/link2', text: 'link 2' },
-    ],
-  };
-
   it('should match  snapshot', () => {
     const { baseElement } = render(<Header {...headerProps} />);
     expect(baseElement).toMatchSnapshot();
@@ -40,8 +37,8 @@ describe('Header', () => {
     const menuButton = getByLabelText('menu');
     fireEvent.click(menuButton);
 
-    headerProps.headerNav.forEach(({ text }) => {
-      expect(getByText(text)).toBeInTheDocument();
+    headerProps.headerNav.forEach(({ label }) => {
+      expect(getByText(label)).toBeInTheDocument();
     });
   });
   it('should navigate to the correct link when a navigation link is clicked', () => {
@@ -49,11 +46,11 @@ describe('Header', () => {
     const menuButton = getByLabelText('menu');
     fireEvent.click(menuButton);
 
-    headerProps.headerNav.forEach(({ text, link }) => {
-      const linkElement = getByText(text);
+    headerProps.headerNav.forEach(({ href, label }) => {
+      const linkElement = getByText(label);
       fireEvent.click(linkElement);
 
-      expect(router.push).toHaveBeenCalledWith(link);
+      expect(router.push).toHaveBeenCalledWith(href);
     });
-  })
+  });
 });

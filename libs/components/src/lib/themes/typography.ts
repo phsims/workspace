@@ -1,7 +1,7 @@
 export const typography= {
   h1:{
     fontSize: '4.5rem',
-    lineHeight: '6.75rem',
+    lineHeight: '5rem',
     fontWeight: 600, 
   },
   h2: {
@@ -11,5 +11,6 @@ export const typography= {
   body1: {
     fontSize: '1rem',
     fontWeight: 400,
+    marginBottom: '1rem'
   },
 };

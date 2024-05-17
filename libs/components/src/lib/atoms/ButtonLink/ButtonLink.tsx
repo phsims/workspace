@@ -1,6 +1,7 @@
-import { Button } from '@mui/material';
-import router from 'next/router';
+
 import { ReactNode } from 'react';
+import { useRouter } from 'next/navigation'
+import { Button } from '@mui/material';
 
 export interface ButtonLinkProps {
   text: string;
@@ -26,6 +27,8 @@ export function ButtonLink({
   endIcon,
   startIcon
 }: ButtonLinkProps) {
+  const router = useRouter()
+  
   return (
     <Button variant={variant} color={color} startIcon={startIcon} endIcon={endIcon} onClick={() => router.push(link)} >
       {text}
