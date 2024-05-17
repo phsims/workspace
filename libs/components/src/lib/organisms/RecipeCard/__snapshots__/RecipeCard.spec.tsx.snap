@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RecipeCard should match snapshot 1`] = `
+<body>
+  <div>
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
+    >
+      <div
+        class="MuiBox-root css-1urz026"
+      >
+        <img
+          alt="test title"
+          data-nimg="fill"
+          decoding="async"
+          loading="lazy"
+          sizes="300px"
+          src="/_next/image?url=%2Ftest.png&w=3840&q=75"
+          srcset="/_next/image?url=%2Ftest.png&w=16&q=75 16w, /_next/image?url=%2Ftest.png&w=32&q=75 32w, /_next/image?url=%2Ftest.png&w=48&q=75 48w, /_next/image?url=%2Ftest.png&w=64&q=75 64w, /_next/image?url=%2Ftest.png&w=96&q=75 96w, /_next/image?url=%2Ftest.png&w=128&q=75 128w, /_next/image?url=%2Ftest.png&w=256&q=75 256w, /_next/image?url=%2Ftest.png&w=384&q=75 384w, /_next/image?url=%2Ftest.png&w=640&q=75 640w, /_next/image?url=%2Ftest.png&w=750&q=75 750w, /_next/image?url=%2Ftest.png&w=828&q=75 828w, /_next/image?url=%2Ftest.png&w=1080&q=75 1080w, /_next/image?url=%2Ftest.png&w=1200&q=75 1200w, /_next/image?url=%2Ftest.png&w=1920&q=75 1920w, /_next/image?url=%2Ftest.png&w=2048&q=75 2048w, /_next/image?url=%2Ftest.png&w=3840&q=75 3840w"
+          style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
+        />
+      </div>
+      <div
+        class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+      >
+        <h5
+          class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
+        >
+          test title
+        </h5>
+        <p
+          class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+        >
+          test summary...
+        </p>
+      </div>
+      <div
+        class="MuiCardActions-root MuiCardActions-spacing css-dnrpxu-MuiCardActions-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary css-1knaqv7-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          Go to recipe
+          <span
+            class="MuiButton-icon MuiButton-endIcon MuiButton-iconSizeSmall css-155nyw6-MuiButton-endIcon"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="ArrowForwardIosRoundedIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7.38 21.01c.49.49 1.28.49 1.77 0l8.31-8.31c.39-.39.39-1.02 0-1.41L9.15 2.98c-.49-.49-1.28-.49-1.77 0s-.49 1.28 0 1.77L14.62 12l-7.25 7.25c-.48.48-.48 1.28.01 1.76"
+              />
+            </svg>
+          </span>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+`;

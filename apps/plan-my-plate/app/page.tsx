@@ -1,19 +1,11 @@
 'use client';
 import Image from 'next/image';
 import { Box, Grid, Typography } from '@mui/material';
-import { Header, Banner, ButtonLink } from '@workspace/components';
-
-const navItems = [{ label: 'Recipes', href: '/recipes' }];
+import {  Banner, ButtonLink } from '@workspace/components';
 
 export default function Index() {
   return (
     <>
-      <Header
-        headerNav={navItems}
-        title={'Plan My Plate'}
-        titleColor="primary.main"
-      />
-
       <Banner background="grey.light">
         <Grid
           container
@@ -49,14 +41,14 @@ export default function Index() {
                 color="primary"
                 text="Lets Cook"
                 link="#cook"
-                size='large'
+                size="large"
               />
               <ButtonLink
                 variant="outlined"
                 color="primary"
                 text="Explore Now"
                 link="#fatures"
-                size='large'
+                size="large"
               />
             </Box>
           </Grid>

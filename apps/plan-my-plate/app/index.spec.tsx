@@ -3,7 +3,7 @@ import { useRouter } from 'next-router-mock';
 import mockRouter from 'next-router-mock';
 import { render } from '@testing-library/react';
 
-import Page from '../app/page';
+import Page from './page';
 
 jest.mock('next/navigation', () => {
   return {
@@ -13,6 +13,11 @@ jest.mock('next/navigation', () => {
 });
 
 describe('Page', () => {
+  it('should match snapshot', async () => {
+    mockRouter.push('/');
+    const { asFragment } = render(<Page />);
+    expect(asFragment).toMatchSnapshot();
+  })
   it('should render successfully', () => {
     const { baseElement } = render(<Page />);
     expect(baseElement).toBeTruthy();
