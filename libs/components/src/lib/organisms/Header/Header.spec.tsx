@@ -1,5 +1,7 @@
 import { fireEvent, render } from '@testing-library/react';
-import router from 'next/router';
+import mockRouter from 'next-router-mock';
+import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
+
 
 import Header, { HeaderProps } from './Header';
 
@@ -10,11 +12,9 @@ const headerProps: HeaderProps = {
     { href: '/link2', label: 'link 2' },
   ],
 };
-// Mock the next router
-jest.mock('next/router', () => ({
-  push: jest.fn(),
-}));
+jest.mock('next/navigation', () => require('next-router-mock'));
 describe('Header', () => {
+
   it('should match  snapshot', () => {
     const { baseElement } = render(<Header {...headerProps} />);
     expect(baseElement).toMatchSnapshot();
@@ -32,7 +32,7 @@ describe('Header', () => {
     expect(getByRole('presentation')).toBeInTheDocument();
   });
 
-  it('should render the navigation links correctly in the drawer', () => {
+  it('should render the najestgation links correctly in the drawer', () => {
     const { getByLabelText, getByText } = render(<Header {...headerProps} />);
     const menuButton = getByLabelText('menu');
     fireEvent.click(menuButton);
@@ -41,8 +41,8 @@ describe('Header', () => {
       expect(getByText(label)).toBeInTheDocument();
     });
   });
-  it('should navigate to the correct link when a navigation link is clicked', () => {
-    const { getByLabelText, getByText } = render(<Header {...headerProps} />);
+  it('should najestgate to the correct link when a najestgation link is clicked', () => {
+    const { getByLabelText, getByText } = render(<Header {...headerProps} />, { wrapper: MemoryRouterProvider });
     const menuButton = getByLabelText('menu');
     fireEvent.click(menuButton);
 
@@ -50,7 +50,7 @@ describe('Header', () => {
       const linkElement = getByText(label);
       fireEvent.click(linkElement);
 
-      expect(router.push).toHaveBeenCalledWith(href);
+      expect(mockRouter.asPath).toEqual(href)
     });
   });
 });

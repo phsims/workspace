@@ -7,6 +7,7 @@ export const typography= {
   h2: {
     fontSize: '2.5rem',
     fontWeight: 500,
+     texttransform: 'uppercase',
   },
   body1: {
     fontSize: '1rem',

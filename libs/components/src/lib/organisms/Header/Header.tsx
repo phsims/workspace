@@ -1,8 +1,9 @@
 'use client';
-import { usePathname } from 'next/navigation';
-import router from 'next/router';
+import { ReactNode, useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { Box } from '@mui/material';
+
 import {
-  Box,
   AppBar,
   Toolbar,
   IconButton,
@@ -11,16 +12,18 @@ import {
   ListItemButton,
   MenuList,
   Container,
+  Button,
 } from '@mui/material';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
-import { useState } from 'react';
 
 interface NavProps {
   href: string;
   label: string;
+  icon?: ReactNode;
 }
 
 export interface HeaderProps {
+  logo?: ReactNode;
   headerNav: NavProps[];
   title: string;
   titleColor?: string;
@@ -30,8 +33,9 @@ export function Header({
   headerNav,
   title,
   titleColor = 'primary',
+  logo = null,
 }: HeaderProps) {
-  const pathname = usePathname();
+  const router = useRouter();
   const [open, setOpen] = useState(false);
 
   const toggleDrawer = (newOpen: boolean) => () => {
@@ -43,7 +47,7 @@ export function Header({
       <AppBar
         position="static"
         color="transparent"
-        sx={{ padding: ' 1rem 0', flexGrow: 1 }}
+        sx={{ p: ' 1rem 0', flexGrow: 1 }}
       >
         <Container>
           <Toolbar>
@@ -58,21 +62,48 @@ export function Header({
                 <MenuRoundedIcon sx={{ height: '28px', width: '28px' }} />
               </IconButton>
             )}
-            <Typography
-              variant="h2"
-              component="div"
-              sx={{ flexGrow: 1, color: titleColor, fontSize: '2rem' }}
+
+            <Button
+              onClick={() => router.push('/')}
+              sx={{
+                p: 0,
+                ':hover': {
+                  bgcolor: 'transparent',
+                },
+              }}
             >
-              {title}
-            </Typography>
+              {logo && <Box sx={{ mr: 2 }}>{logo}</Box>}
+
+              <Typography
+                variant="h2"
+                component="div"
+                sx={{
+                  flexGrow: 1,
+                  color: titleColor,
+                  fontSize: '2rem',
+                  textTransform: 'capitalize',
+                }}
+              >
+                {title}
+              </Typography>
+            </Button>
           </Toolbar>
         </Container>
       </AppBar>
       {headerNav && (
         <Drawer open={open} onClose={toggleDrawer(false)}>
-          <MenuList dense sx={{ width: 320 }}>
-            {headerNav.map(({ href, label }) => (
-              <ListItemButton key={label} onClick={() => router.push(href)}>
+          <MenuList dense sx={{ width: 320, p: 4 }}>
+            {headerNav.map(({ href, label, icon }) => (
+              <ListItemButton
+                key={label}
+                onClick={() => router.push(href)}
+                sx={{
+                  display: 'flex',
+                  justifyContent: 'flex-start',
+                  alignItems: 'center',
+                }}
+              >
+                {icon && <Box sx={{ mr: 2 }}>{icon}</Box>}
                 {label}
               </ListItemButton>
             ))}
