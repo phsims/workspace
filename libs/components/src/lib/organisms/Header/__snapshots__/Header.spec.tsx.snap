@@ -4,7 +4,7 @@ exports[`Header should match  snapshot 1`] = `
 <body>
   <div>
     <header
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorTransparent MuiAppBar-positionStatic css-lkclok-MuiPaper-root-MuiAppBar-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorTransparent MuiAppBar-positionStatic css-iu7ypf-MuiPaper-root-MuiAppBar-root"
     >
       <div
         class="MuiContainer-root MuiContainer-maxWidthLg css-1oqqzyl-MuiContainer-root"
