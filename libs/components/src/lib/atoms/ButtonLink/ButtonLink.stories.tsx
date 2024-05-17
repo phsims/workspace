@@ -16,6 +16,11 @@ export const Primary = {
     text: 'Test Button',
     link: '/test',
   },
+  parameters: {
+    nextjs: {
+      appDirectory: true,
+    },
+  },
 };
 
 export const Heading: Story = {

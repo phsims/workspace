@@ -49,12 +49,14 @@ export default function Index() {
                 color="primary"
                 text="Lets Cook"
                 link="#cook"
+                size='large'
               />
               <ButtonLink
                 variant="outlined"
                 color="primary"
                 text="Explore Now"
                 link="#fatures"
+                size='large'
               />
             </Box>
           </Grid>

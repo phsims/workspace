@@ -24,17 +24,18 @@ export const Primary = {
     id:222,
     image:'/contemplative-reptile.jpg',
     title:'Lizard',
-    summary:'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica'
+    summary:'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
+  link:'/link1'
+  },
+  parameters: {
+    nextjs: {
+      appDirectory: true,
+    },
   },
 };
 
 export const Heading: Story = {
-  args: {
-    id:222,
-    image:'/contemplative-reptile.jpg',
-    title:'Lizard',
-    summary:'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica'
-  },
+  args: {...Primary.args},
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     expect(canvas.getByText(/Lizard/gi)).toBeInTheDocument();

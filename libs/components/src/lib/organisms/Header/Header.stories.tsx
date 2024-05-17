@@ -15,9 +15,14 @@ export const Primary = {
   args: {
     title:'My cool app',
     headerNav:[
-      { link: '/link1', text: 'link 1' },
-      { link: '/link2', text: 'link 2' },
+      { href: '/link1', label: 'link 1' },
+      { href: '/link2', label: 'link 2' },
     ]
+  },
+  parameters: {
+    nextjs: {
+      appDirectory: true,
+    },
   },
 };
 

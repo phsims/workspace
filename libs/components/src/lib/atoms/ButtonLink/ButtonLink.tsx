@@ -1,4 +1,4 @@
-
+"use client"
 import { ReactNode } from 'react';
 import { useRouter } from 'next/navigation'
 import { Button } from '@mui/material';
@@ -17,20 +17,22 @@ export interface ButtonLinkProps {
     | 'warning';
   endIcon?: ReactNode;
   startIcon?: ReactNode;
+  size?: 'small' | 'medium' | 'large';
 }
 
 export function ButtonLink({
   text,
   link,
+  endIcon,
+  startIcon,
+  size='medium',
   variant = 'contained',
   color = 'primary',
-  endIcon,
-  startIcon
 }: ButtonLinkProps) {
   const router = useRouter()
   
   return (
-    <Button variant={variant} color={color} startIcon={startIcon} endIcon={endIcon} onClick={() => router.push(link)} >
+    <Button variant={variant} color={color} startIcon={startIcon} size={size} endIcon={endIcon} onClick={() => router.push(link)} >
       {text}
     </Button>
   );

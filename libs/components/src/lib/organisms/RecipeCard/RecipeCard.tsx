@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import DOMPurify from 'isomorphic-dompurify';
-import { Card, CardContent, Typography, Box, CardActions, Button } from '@mui/material';
+import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
+import { Card, CardContent, Typography, Box, CardActions } from '@mui/material';
 import ButtonLink from '../../atoms/ButtonLink/ButtonLink';
 
 export interface RecipeCardProps {
@@ -37,7 +38,7 @@ export function RecipeCard({ image, title, summary ,link}: RecipeCardProps) {
         />
       </CardContent>
       <CardActions>
-        <ButtonLink text='Get the recipe' link={link} />
+        <ButtonLink text='Go to recipe' link={link} variant='text'size='small' endIcon={<ArrowForwardIosRoundedIcon/>} />
       </CardActions>
     </Card>
   );

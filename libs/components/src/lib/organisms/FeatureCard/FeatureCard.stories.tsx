@@ -25,6 +25,11 @@ export const Primary = {
     description: "Automatically generate shopping lists from your meal plans.",
     image: "/featureFour.svg",
   },
+  parameters: {
+    nextjs: {
+      appDirectory: true,
+    },
+  },
 };
 
 export const Heading: Story = {

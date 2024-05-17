@@ -12,7 +12,6 @@ export interface FeatureCardProps {
 
 export function FeatureCard({ title, description, image,link }: FeatureCardProps) {
   const router = useRouter()
-  
   return (
     <Paper elevation={1} sx={{ p: 3, textAlign: 'center' }}>
       <Box
