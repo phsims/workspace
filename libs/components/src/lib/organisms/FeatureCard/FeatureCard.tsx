@@ -31,14 +31,19 @@ export function FeatureCard({
         textAlign: 'center',
         display: 'flex',
         flexDirection: 'column',
-       
         overflow: 'visible',
-        mt: 8,
-        mb: 8,
+        mt: 6,
         position: 'relative',
       }}
     >
-      <Box sx={{ position: 'absolute', width: '100%', height: '270px' ,top:'-90px'}}>
+      <Box
+        sx={{
+          position: 'absolute',
+          width: '100%',
+          height: '270px',
+          top: '-90px',
+        }}
+      >
         <Image
           src={image}
           alt={title}
@@ -46,18 +51,10 @@ export function FeatureCard({
           fill
           style={{
             objectFit: 'cover',
-
           }}
         />
       </Box>
-
-      {/* <Box
-        component="img"
-        src={image}
-        alt={title}
-        sx={{ width: '100%', height: 'auto', mt: '-35%', mb: '-40%' }}
-      /> */}
-      <CardContent sx={{mt:'70px'}}>
+      <CardContent sx={{ mt: '70px' }}>
         <Typography variant="h5" sx={{ mb: 2, fontWeight: 600 }}>
           {title}
         </Typography>

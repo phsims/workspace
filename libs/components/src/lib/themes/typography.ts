@@ -16,6 +16,23 @@ export const typography = {
       fontSize: '2rem',
     },
   },
+  h3: {
+    fontSize: '1.25rem',
+    fontWeight: 400,
+    letterSpacing: '0.515em',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    marginBottom: '2rem',
+    maxWidth: '80%',
+  },
+  subtitle1: {
+    fontSize: '3rem',
+    lineHeight: '4.25rem',   
+     maxWidth: '80%',
+     marginLeft: 'auto',
+     marginRight: 'auto',
+     fontWeight:600
+  },
   body1: {
     fontSize: '1rem',
     fontWeight: 400,

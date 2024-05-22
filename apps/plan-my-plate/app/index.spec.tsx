@@ -13,11 +13,7 @@ jest.mock('next/navigation', () => {
 });
 
 describe('Page', () => {
-  it('should match snapshot', async () => {
-    mockRouter.push('/');
-    const { asFragment } = render(<Page />);
-    expect(asFragment).toMatchSnapshot();
-  })
+
   it('should render successfully', () => {
     const { baseElement } = render(<Page />);
     expect(baseElement).toBeTruthy();

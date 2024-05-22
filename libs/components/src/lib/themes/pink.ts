@@ -63,6 +63,13 @@ const theme = createTheme({
       ...typography.h2,
       fontWeight: 500,
     },
+    h3:{...typography.h3,
+      color: pallet.primary.main,
+    },
+    subtitle1:{
+      color: pallet.grey.dark,
+      ...typography.subtitle1,
+    },
     body1: {
       color: pallet.grey.main,
       ...typography.body1,

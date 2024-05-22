@@ -72,14 +72,18 @@ export default function Index() {
         </Grid>
       </Banner>
       <Banner background="grey.light">
+        <Typography variant="h3" align='center'>FEATURES</Typography>
+        <Typography variant="subtitle1" align='center'>
+          Simplify Meal Planning and Grocery Shopping
+        </Typography>
         <Grid
           container
           spacing={{ xs: 2, md: 3 }}
           columns={{ xs: 1, sm: 4 }}
-          sx={{ alignItems: 'stretch', }}
+          sx={{ alignItems: 'stretch' }}
         >
           {features.map((feature: FeatureCardProps, index: number) => (
-            <Grid item md={4} xs={1} key={index} sx={{ display: 'flex' }}>
+            <Grid item md={4} xs={1} key={index} sx={{ display: 'flex',marginTop:'3rem' }}>
               <FeatureCard {...feature} />
             </Grid>
           ))}
