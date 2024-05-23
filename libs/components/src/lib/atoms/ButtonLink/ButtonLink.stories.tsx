@@ -6,7 +6,7 @@ import { expect } from '@storybook/jest';
 
 const meta: Meta<typeof ButtonLink> = {
   component: ButtonLink,
-  title: 'ButtonLink',
+  title: '@atoms/ButtonLink',
 };
 export default meta;
 type Story = StoryObj<typeof ButtonLink>;

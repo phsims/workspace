@@ -7,7 +7,7 @@ import { Banner } from './Banner';
 
 const meta: Meta<typeof Banner> = {
   component: Banner,
-  title: '@organisms/Banner',
+  title: '@atoms/Banner',
 };
 export default meta;
 type Story = StoryObj<typeof Banner>;
