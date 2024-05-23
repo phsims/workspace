@@ -9,13 +9,13 @@ export interface RecipeCardProps {
   image: string;
   title: string;
   summary: string;
-  link:string;
 }
 
-export function RecipeCard({ image, title, summary ,link}: RecipeCardProps) {
+export function RecipeCard({ image, title, summary,id}: RecipeCardProps) {
   const content = DOMPurify.sanitize(`${summary.substring(0, 70)}...`);
+
   return (
-    <Card sx={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+    <Card sx={{ display: 'flex', flexDirection: 'column', height: '100%' }} data-testid={id}>
       <Box sx={{ position: 'relative', width: '100%', height: '140px' }}>
         <Image
           src={image}
@@ -40,7 +40,7 @@ export function RecipeCard({ image, title, summary ,link}: RecipeCardProps) {
 
 
       <CardActions sx={{ mt: 'auto' }}>
-        <ButtonLink text='Go to recipe' link={link} variant='text'size='small' endIcon={<ArrowForwardIosRoundedIcon/>} />
+        <ButtonLink text='Go to recipe' link={`recipes/${id}`} variant='text'size='small' endIcon={<ArrowForwardIosRoundedIcon/>} />
       </CardActions>
     </Card>
   );

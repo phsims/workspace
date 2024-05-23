@@ -1,4 +1,4 @@
-import { Box, Container } from '@mui/material';
+import { Box } from '@mui/material';
 import { ReactNode } from 'react';
 
 export interface BannerProps {
@@ -12,7 +12,7 @@ export function Banner({
 }: BannerProps) {
   return (
     <Box sx={{ bgcolor: background, padding: { xs: 4, md: 8 } }}>
-      <Container>{children}</Container>
+     {children}
     </Box>
   );
 }

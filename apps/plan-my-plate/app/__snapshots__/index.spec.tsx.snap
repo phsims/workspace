@@ -1,0 +1,318 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Page should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiBox-root css-1b2j6aq"
+  >
+    <div
+      class="MuiContainer-root MuiContainer-maxWidthLg css-1oqqzyl-MuiContainer-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-spacing-md-3 css-1xgjpwf-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 MuiGrid-grid-md-6 css-c7ix2b-MuiGrid-root"
+        >
+          <h1
+            class="MuiTypography-root MuiTypography-h1 css-yz1xox-MuiTypography-root"
+          >
+            From Pantry to Plate, Perfectly Planned
+          </h1>
+          <p
+            class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+          >
+             Are you tired of the daily mealtime chaos, juggling between last-minute recipe searches and grocery store rushes? PlanMyPlate is here to simplify your life and make meal planning a breeze. Whether you're a seasoned chef or a kitchen newbie, our app is your key to stress-free meal planning and efficient grocery shopping.
+          </p>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 MuiGrid-grid-md-6 css-c7ix2b-MuiGrid-root"
+        >
+          <img
+            alt="From Pantry to Plate, Perfectly Planned"
+            data-nimg="1"
+            decoding="async"
+            height="609"
+            loading="lazy"
+            src="/_next/image?url=%2Fbanner-image.webp&w=1920&q=75"
+            srcset="/_next/image?url=%2Fbanner-image.webp&w=750&q=75 1x, /_next/image?url=%2Fbanner-image.webp&w=1920&q=75 2x"
+            style="color: transparent; width: 100%; height: auto;"
+            title="From Pantry to Plate, Perfectly Planned"
+            width="657"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="MuiBox-root css-1b2j6aq"
+  >
+    <h3
+      class="MuiTypography-root MuiTypography-h3 MuiTypography-alignCenter css-47suzj-MuiTypography-root"
+    >
+      FEATURES
+    </h3>
+    <h6
+      class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter css-118o8hd-MuiTypography-root"
+    >
+      Simplify Meal Planning and Grocery Shopping
+    </h6>
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-spacing-md-3 css-boly7t-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 MuiGrid-grid-md-4 css-y1j0wd-MuiGrid-root"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-1rrzovd-MuiPaper-root-MuiCard-root"
+        >
+          <div
+            class="MuiBox-root css-vkeyl2"
+          >
+            <img
+              alt="Plan Meals"
+              data-nimg="fill"
+              decoding="async"
+              loading="lazy"
+              src="/featureThree.svg"
+              style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
+            />
+          </div>
+          <div
+            class="MuiCardContent-root css-1eox0ct-MuiCardContent-root"
+          >
+            <h5
+              class="MuiTypography-root MuiTypography-h5 css-1himrsc-MuiTypography-root"
+            >
+              Plan Meals
+            </h5>
+            <p
+              class="MuiTypography-root MuiTypography-body1 css-1wczmbf-MuiTypography-root"
+            >
+              Plan your meals for the week with our easy-to-use meal planner. Choose from thousands of recipes and create your own custom meal plans.
+            </p>
+          </div>
+          <div
+            class="MuiCardActions-root MuiCardActions-spacing css-13rhmik-MuiCardActions-root"
+          >
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-azzldy-MuiButtonBase-root-MuiButton-root"
+              tabindex="0"
+              type="button"
+            >
+              Learn more
+              <span
+                class="MuiButton-icon MuiButton-endIcon MuiButton-iconSizeMedium css-9tj150-MuiButton-endIcon"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                  data-testid="ArrowForwardIosRoundedIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M7.38 21.01c.49.49 1.28.49 1.77 0l8.31-8.31c.39-.39.39-1.02 0-1.41L9.15 2.98c-.49-.49-1.28-.49-1.77 0s-.49 1.28 0 1.77L14.62 12l-7.25 7.25c-.48.48-.48 1.28.01 1.76"
+                  />
+                </svg>
+              </span>
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 MuiGrid-grid-md-4 css-y1j0wd-MuiGrid-root"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-1rrzovd-MuiPaper-root-MuiCard-root"
+        >
+          <div
+            class="MuiBox-root css-vkeyl2"
+          >
+            <img
+              alt="Create Lists"
+              data-nimg="fill"
+              decoding="async"
+              loading="lazy"
+              src="/featureOne.svg"
+              style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
+            />
+          </div>
+          <div
+            class="MuiCardContent-root css-1eox0ct-MuiCardContent-root"
+          >
+            <h5
+              class="MuiTypography-root MuiTypography-h5 css-1himrsc-MuiTypography-root"
+            >
+              Create Lists
+            </h5>
+            <p
+              class="MuiTypography-root MuiTypography-body1 css-1wczmbf-MuiTypography-root"
+            >
+              Generate grocery lists based on your meal plans and save time at the store. Never forget an ingredient again!
+            </p>
+          </div>
+          <div
+            class="MuiCardActions-root MuiCardActions-spacing css-13rhmik-MuiCardActions-root"
+          >
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-azzldy-MuiButtonBase-root-MuiButton-root"
+              tabindex="0"
+              type="button"
+            >
+              Learn more
+              <span
+                class="MuiButton-icon MuiButton-endIcon MuiButton-iconSizeMedium css-9tj150-MuiButton-endIcon"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                  data-testid="ArrowForwardIosRoundedIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M7.38 21.01c.49.49 1.28.49 1.77 0l8.31-8.31c.39-.39.39-1.02 0-1.41L9.15 2.98c-.49-.49-1.28-.49-1.77 0s-.49 1.28 0 1.77L14.62 12l-7.25 7.25c-.48.48-.48 1.28.01 1.76"
+                  />
+                </svg>
+              </span>
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 MuiGrid-grid-md-4 css-y1j0wd-MuiGrid-root"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-1rrzovd-MuiPaper-root-MuiCard-root"
+        >
+          <div
+            class="MuiBox-root css-vkeyl2"
+          >
+            <img
+              alt="Track Nutrition"
+              data-nimg="fill"
+              decoding="async"
+              loading="lazy"
+              src="/featureFour.svg"
+              style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
+            />
+          </div>
+          <div
+            class="MuiCardContent-root css-1eox0ct-MuiCardContent-root"
+          >
+            <h5
+              class="MuiTypography-root MuiTypography-h5 css-1himrsc-MuiTypography-root"
+            >
+              Track Nutrition
+            </h5>
+            <p
+              class="MuiTypography-root MuiTypography-body1 css-1wczmbf-MuiTypography-root"
+            >
+              Keep track of your daily nutrition intake and make healthier choices. Our app provides detailed nutritional information for every recipe.
+            </p>
+          </div>
+          <div
+            class="MuiCardActions-root MuiCardActions-spacing css-13rhmik-MuiCardActions-root"
+          >
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-azzldy-MuiButtonBase-root-MuiButton-root"
+              tabindex="0"
+              type="button"
+            >
+              Learn more
+              <span
+                class="MuiButton-icon MuiButton-endIcon MuiButton-iconSizeMedium css-9tj150-MuiButton-endIcon"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                  data-testid="ArrowForwardIosRoundedIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M7.38 21.01c.49.49 1.28.49 1.77 0l8.31-8.31c.39-.39.39-1.02 0-1.41L9.15 2.98c-.49-.49-1.28-.49-1.77 0s-.49 1.28 0 1.77L14.62 12l-7.25 7.25c-.48.48-.48 1.28.01 1.76"
+                  />
+                </svg>
+              </span>
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 MuiGrid-grid-md-4 css-y1j0wd-MuiGrid-root"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-1rrzovd-MuiPaper-root-MuiCard-root"
+        >
+          <div
+            class="MuiBox-root css-vkeyl2"
+          >
+            <img
+              alt="Get Cooking"
+              data-nimg="fill"
+              decoding="async"
+              loading="lazy"
+              src="/featureTwo.svg"
+              style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
+            />
+          </div>
+          <div
+            class="MuiCardContent-root css-1eox0ct-MuiCardContent-root"
+          >
+            <h5
+              class="MuiTypography-root MuiTypography-h5 css-1himrsc-MuiTypography-root"
+            >
+              Get Cooking
+            </h5>
+            <p
+              class="MuiTypography-root MuiTypography-body1 css-1wczmbf-MuiTypography-root"
+            >
+              Follow step-by-step instructions and cook delicious meals with ease. Our app is designed to help you become a better cook.
+            </p>
+          </div>
+          <div
+            class="MuiCardActions-root MuiCardActions-spacing css-13rhmik-MuiCardActions-root"
+          >
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-azzldy-MuiButtonBase-root-MuiButton-root"
+              tabindex="0"
+              type="button"
+            >
+              Learn more
+              <span
+                class="MuiButton-icon MuiButton-endIcon MuiButton-iconSizeMedium css-9tj150-MuiButton-endIcon"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                  data-testid="ArrowForwardIosRoundedIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M7.38 21.01c.49.49 1.28.49 1.77 0l8.31-8.31c.39-.39.39-1.02 0-1.41L9.15 2.98c-.49-.49-1.28-.49-1.77 0s-.49 1.28 0 1.77L14.62 12l-7.25 7.25c-.48.48-.48 1.28.01 1.76"
+                  />
+                </svg>
+              </span>
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

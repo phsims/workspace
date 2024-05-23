@@ -1,6 +1,4 @@
-
 import { render, waitFor } from '@testing-library/react';
-import { useRouter } from 'next-router-mock';
 import mockRouter from 'next-router-mock';
 
 import { mockRecipes } from '../__mocks__/recipesData';
@@ -22,6 +20,17 @@ describe('Recipes', () => {
     await waitFor(() => {
       expect(asFragment).toMatchSnapshot();
     });
-  })
+  });
 
+  it('renders the recipe cards correctly', async () => {
+    const { baseElement,getByTestId } = render(await Recipes());
+
+    await waitFor(() => {
+      expect(expect(baseElement).toBeDefined());
+
+      mockRecipes.recipes.forEach((recipe) => {
+        expect(getByTestId(recipe.id)).toBeInTheDocument();
+      });
+    });
+  });
 });

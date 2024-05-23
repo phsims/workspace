@@ -1,6 +1,4 @@
 import { render } from '@testing-library/react';
-import { useRouter } from 'next-router-mock';
-import mockRouter from 'next-router-mock';
 
 import RecipeCard from './RecipeCard';
 

@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderBanner should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiBox-root css-1b2j6aq"
+  >
+    <div
+      class="MuiContainer-root MuiContainer-maxWidthLg css-1oqqzyl-MuiContainer-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-spacing-md-3 css-1xgjpwf-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 MuiGrid-grid-md-9 css-hp6kmk-MuiGrid-root"
+        >
+          <h1
+            class="MuiTypography-root MuiTypography-h1 css-yz1xox-MuiTypography-root"
+          >
+            Find Your Favorite Recipes with Ease
+          </h1>
+          <p
+            class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+          >
+             Explore a world of culinary delights with our extensive collection of recipes. Whether you're looking for quick weeknight dinners, healthy meal options, or indulgent treats, our recipe cards offer something for everyone. Browse, save, and start cooking today!
+          </p>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 MuiGrid-grid-md-3 css-p80g4r-MuiGrid-root"
+        >
+          <img
+            alt="Find Your Favorite Recipes"
+            data-nimg="1"
+            decoding="async"
+            height="526"
+            loading="lazy"
+            src="/soup.svg"
+            style="color: transparent; width: 100%; height: auto;"
+            title="Find Your Favorite Recipes"
+            width="526"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
