@@ -5,8 +5,23 @@ import Banner from './Banner';
 describe('Banner', () => {
   it('should render successfully', () => {
     const { baseElement } = render(
-      <Banner ><p>stuff goes here</p></Banner>
+      <Banner>
+        <p>stuff goes here</p>
+      </Banner>
     );
     expect(baseElement).toBeTruthy();
   });
+
+  it('shoud match snapshot', () => {
+    const { baseElement } = render(
+      <Banner>
+        <p>stuff goes here</p>
+      </Banner>
+    );
+    expect(baseElement).toMatchSnapshot();
+  });
 });
+
+
+
+
