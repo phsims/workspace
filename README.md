@@ -4,7 +4,7 @@
 
 # Design Sytyem
 ## Storybook Application
-(https://workspace-aktn.vercel.app/?path=/story/features--primary)
+(https://workspace-aktn.vercel.app/)
 
 
 
