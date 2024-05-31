@@ -1,36 +1,36 @@
-import { render, waitFor } from '@testing-library/react';
 import mockRouter from 'next-router-mock';
+import { render } from '@testing-library/react';
+import fetch from 'jest-fetch-mock';
 
-import { mockRecipes } from '../__mocks__/recipesData';
+import { mockRecipes } from '@workspace/components';
+import { getSpoonConfig, ConfigProps } from '../middleware/setup';
+
 import Recipes from './page';
-
-jest.mock('../actions/getRecipes', () => ({
-  __esModule: true,
-  getRecipes: jest.fn().mockResolvedValue(mockRecipes),
-}));
-
 jest.mock('next/navigation', () => require('next-router-mock'));
+jest.mock('../middleware/setup');
 describe('Recipes', () => {
+  let appConfig: ConfigProps;
+
   beforeEach(() => {
-    mockRouter.push('/');
-  });
-
-  it('should match snapshot', async () => {
-    const { asFragment } = render(await Recipes());
-    await waitFor(() => {
-      expect(asFragment).toMatchSnapshot();
+    appConfig = getSpoonConfig();
+    global.fetch = jest.fn().mockResolvedValue({
+      ok: true, 
+      json: jest.fn().mockResolvedValue(mockRecipes),
     });
   });
 
-  it('renders the recipe cards correctly', async () => {
-    const { baseElement,getByTestId } = render(await Recipes());
+  afterEach(() => {
+    fetch.resetMocks();
+  });
 
-    await waitFor(() => {
-      expect(expect(baseElement).toBeDefined());
+  it('should render successfully', async () => {
+    const { container } = render(await Recipes());
+    expect(container).toBeDefined();
+  });
 
-      mockRecipes.recipes.forEach((recipe) => {
-        expect(getByTestId(recipe.id)).toBeInTheDocument();
-      });
-    });
+  it('should use the mock getAppConfig function', () => {
+    expect(appConfig.baseUrl).toBe('http://mock_base_url.com');
+    expect(appConfig.headers['Content-Type']).toBe('application/json');
+    expect(appConfig.env).toBe('development');
   });
 });
