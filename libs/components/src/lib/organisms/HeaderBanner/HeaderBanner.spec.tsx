@@ -3,7 +3,6 @@ import { render } from '@testing-library/react';
 import HeaderBanner, { HeaderBannerProps } from './HeaderBanner';
 
 const mockProps: HeaderBannerProps = {
-  gridSplit: [9, 3],
   title: 'Find Your Favorite Recipes with Ease',
   intro:
     "Explore a world of culinary delights with our extensive collection of recipes. Whether you're looking for quick weeknight dinners, healthy meal options, or indulgent treats, our recipe cards offer something for everyone. Browse, save, and start cooking today!",

@@ -1,23 +1,20 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Header } from './Header';
+import { RecipeCardGrid } from './RecipeCardGrid';
+import { mockRecipes } from '../../__mocks__/recipesData';
 
 import { within } from '@storybook/testing-library';
 import { expect } from '@storybook/jest';
 
-const meta: Meta<typeof Header> = {
-  component: Header,
-  title: '@organisms/Header',
+const meta: Meta<typeof RecipeCardGrid> = {
+  component: RecipeCardGrid,
+  title: '@organisms/RecipeCardGrid',
 };
 export default meta;
-type Story = StoryObj<typeof Header>;
+type Story = StoryObj<typeof RecipeCardGrid>;
 
 export const Primary = {
   args: {
-    title:'My cool app',
-    headerNav:[
-      { href: '/link1', label: 'link 1' },
-      { href: '/link2', label: 'link 2' },
-    ]
+    ...mockRecipes,
   },
   parameters: {
     nextjs: {
@@ -27,9 +24,9 @@ export const Primary = {
 };
 
 export const Heading: Story = {
-  args: {...Primary.args},
+  args: { ...Primary.args },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    expect(canvas.getByText(/My cool app /gi)).toBeInTheDocument();
+    expect(canvas.getByText(/Welcome to RecipeCardGrid!/gi)).toBeInTheDocument();
   },
 };

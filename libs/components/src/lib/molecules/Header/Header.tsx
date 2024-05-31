@@ -42,6 +42,11 @@ export function Header({
     setOpen(newOpen);
   };
 
+  const handleNavClick = (href: string) => {
+    router.push(href);
+    setOpen(false);
+  }
+
   return (
     <>
       <AppBar
@@ -64,7 +69,9 @@ export function Header({
             )}
 
             <Button
-              onClick={() => router.push('/')}
+              onClick={() => {
+                router.push('/');
+              }}
               sx={{
                 p: 0,
                 ':hover': {
@@ -95,7 +102,9 @@ export function Header({
             {headerNav.map(({ href, label, icon }) => (
               <ListItemButton
                 key={label}
-                onClick={() => router.push(href)}
+                onClick={() => {
+                  handleNavClick(href);
+                }}
                 sx={{
                   display: 'flex',
                   justifyContent: 'flex-start',

@@ -1,7 +1,8 @@
+'use client';
+
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import {
-  Box,
   Button,
   Card,
   Typography,
@@ -24,6 +25,7 @@ export function FeatureCard({
   link,
 }: FeatureCardProps) {
   const router = useRouter();
+
   return (
     <Card
       elevation={1}
@@ -36,25 +38,14 @@ export function FeatureCard({
         position: 'relative',
       }}
     >
-      <Box
-        sx={{
-          position: 'absolute',
-          width: '100%',
-          height: '270px',
-          top: '-90px',
-        }}
-      >
-        <Image
-          src={image}
-          alt={title}
-          sizes="270px"
-          fill
-          style={{
-            objectFit: 'cover',
-          }}
-        />
-      </Box>
-      <CardContent sx={{ mt: '70px' }}>
+      <Image
+        src={image}
+        alt={title}
+        height={256}
+        width={256}
+        style={{ margin: '-90px auto  -90px ' }}
+      />
+      <CardContent>
         <Typography variant="h5" sx={{ mb: 2, fontWeight: 600 }}>
           {title}
         </Typography>

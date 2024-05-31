@@ -1,31 +1,29 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { RecipeCard } from './RecipeCard';
+import { FeatureCard } from './FeatureCard';
 
 import { within } from '@storybook/testing-library';
 import { expect } from '@storybook/jest';
 import { Box } from '@mui/material';
 
-const meta: Meta<typeof RecipeCard> = {
-  component: RecipeCard,
-  title: '@organisms/RecipeCard',
+const meta: Meta<typeof FeatureCard> = {
+  component: FeatureCard,
+  title: '@molecules/FeatureCard',
   decorators: [
     (Story) => (
-      <Box sx={{width:345,}}>
+      <Box sx={{width:345,mt:'5rem'}}>
         <Story />
       </Box>
     ),
   ],
 };
 export default meta;
-type Story = StoryObj<typeof RecipeCard>;
+type Story = StoryObj<typeof FeatureCard>;
 
 export const Primary = {
   args: {
-    id:222,
-    image:'/contemplative-reptile.jpg',
-    title:'Lizard',
-    summary:'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
-  link:'/link1'
+    title: "Shopping List Generator",
+    description: "Automatically generate shopping lists from your meal plans.",
+    image: "/featureFour.svg",
   },
   parameters: {
     nextjs: {
@@ -38,6 +36,6 @@ export const Heading: Story = {
   args: {...Primary.args},
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    expect(canvas.getByText(/Lizard/gi)).toBeInTheDocument();
+    expect(canvas.getByText(/Welcome to FeatureCard!/gi)).toBeInTheDocument();
   },
 };

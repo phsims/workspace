@@ -7,10 +7,13 @@ export interface SearchProps {
   id: string;
 }
 
-export function Search({ id, placeholder = 'Search Recipes' }: SearchProps) {
+export function Search({  placeholder = 'Search Recipes' }: SearchProps) {
   return (
     <TextField
       placeholder={placeholder}
+      sx={{
+        '& .MuiInputBase-root': { padding: '0.25rem 0.5rem', borderRadius: '2rem' },
+      }}
       InputProps={{
         endAdornment: (
           <Button

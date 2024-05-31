@@ -12,7 +12,7 @@ exports[`HeaderBanner should match snapshot 1`] = `
         class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-spacing-md-3 css-1xgjpwf-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-b1im03-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-1fyyp8j-MuiGrid-root"
         >
           <h1
             class="MuiTypography-root MuiTypography-h1 css-yz1xox-MuiTypography-root"
@@ -26,7 +26,7 @@ exports[`HeaderBanner should match snapshot 1`] = `
           </p>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-3 css-iv7vbz-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-1fyyp8j-MuiGrid-root"
         >
           <img
             alt="Find Your Favorite Recipes"

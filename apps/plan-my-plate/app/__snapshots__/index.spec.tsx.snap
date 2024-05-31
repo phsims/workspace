@@ -69,20 +69,18 @@ exports[`Page should match snapshot 1`] = `
           <div
             class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-1rrzovd-MuiPaper-root-MuiCard-root"
           >
+            <img
+              alt="Plan Meals"
+              data-nimg="1"
+              decoding="async"
+              height="256"
+              loading="lazy"
+              src="/featureThree.svg"
+              style="color: transparent; margin: -90px auto -90px;"
+              width="256"
+            />
             <div
-              class="MuiBox-root css-vkeyl2"
-            >
-              <img
-                alt="Plan Meals"
-                data-nimg="fill"
-                decoding="async"
-                loading="lazy"
-                src="/featureThree.svg"
-                style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
-              />
-            </div>
-            <div
-              class="MuiCardContent-root css-1eox0ct-MuiCardContent-root"
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
             >
               <h5
                 class="MuiTypography-root MuiTypography-h5 css-1himrsc-MuiTypography-root"
@@ -132,20 +130,18 @@ exports[`Page should match snapshot 1`] = `
           <div
             class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-1rrzovd-MuiPaper-root-MuiCard-root"
           >
+            <img
+              alt="Create Lists"
+              data-nimg="1"
+              decoding="async"
+              height="256"
+              loading="lazy"
+              src="/featureOne.svg"
+              style="color: transparent; margin: -90px auto -90px;"
+              width="256"
+            />
             <div
-              class="MuiBox-root css-vkeyl2"
-            >
-              <img
-                alt="Create Lists"
-                data-nimg="fill"
-                decoding="async"
-                loading="lazy"
-                src="/featureOne.svg"
-                style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
-              />
-            </div>
-            <div
-              class="MuiCardContent-root css-1eox0ct-MuiCardContent-root"
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
             >
               <h5
                 class="MuiTypography-root MuiTypography-h5 css-1himrsc-MuiTypography-root"
@@ -195,20 +191,18 @@ exports[`Page should match snapshot 1`] = `
           <div
             class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-1rrzovd-MuiPaper-root-MuiCard-root"
           >
+            <img
+              alt="Track Nutrition"
+              data-nimg="1"
+              decoding="async"
+              height="256"
+              loading="lazy"
+              src="/featureFour.svg"
+              style="color: transparent; margin: -90px auto -90px;"
+              width="256"
+            />
             <div
-              class="MuiBox-root css-vkeyl2"
-            >
-              <img
-                alt="Track Nutrition"
-                data-nimg="fill"
-                decoding="async"
-                loading="lazy"
-                src="/featureFour.svg"
-                style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
-              />
-            </div>
-            <div
-              class="MuiCardContent-root css-1eox0ct-MuiCardContent-root"
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
             >
               <h5
                 class="MuiTypography-root MuiTypography-h5 css-1himrsc-MuiTypography-root"
@@ -258,20 +252,18 @@ exports[`Page should match snapshot 1`] = `
           <div
             class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-1rrzovd-MuiPaper-root-MuiCard-root"
           >
+            <img
+              alt="Get Cooking"
+              data-nimg="1"
+              decoding="async"
+              height="256"
+              loading="lazy"
+              src="/featureTwo.svg"
+              style="color: transparent; margin: -90px auto -90px;"
+              width="256"
+            />
             <div
-              class="MuiBox-root css-vkeyl2"
-            >
-              <img
-                alt="Get Cooking"
-                data-nimg="fill"
-                decoding="async"
-                loading="lazy"
-                src="/featureTwo.svg"
-                style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
-              />
-            </div>
-            <div
-              class="MuiCardContent-root css-1eox0ct-MuiCardContent-root"
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
             >
               <h5
                 class="MuiTypography-root MuiTypography-h5 css-1himrsc-MuiTypography-root"
