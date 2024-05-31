@@ -3,7 +3,6 @@ import { render } from '@testing-library/react';
 import HeaderBanner, { HeaderBannerProps } from './HeaderBanner';
 
 const mockProps: HeaderBannerProps = {
-  background: 'grey.light',
   gridSplit: [9, 3],
   title: 'Find Your Favorite Recipes with Ease',
   intro:
