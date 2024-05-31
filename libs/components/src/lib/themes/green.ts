@@ -1,16 +1,26 @@
 'use client';
 
-'use client';
-
-import '@fontsource/poppins/400.css'
-import '@fontsource/poppins/500.css'
-import '@fontsource/poppins/600.css'
+import '@fontsource/poppins/400.css';
+import '@fontsource/poppins/500.css';
+import '@fontsource/poppins/600.css';
 
 import { Color } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
-import {typography} from './typography'
+import { TypographyOptions } from '@mui/material/styles/createTypography';
+import { typography } from './typography';
 import { styleOverrides } from './overrides';
 
+declare module '@mui/material/Typography' {
+  interface TypographyPropsVariantOverrides {
+    h1_Headline: true;
+    body1_Bold: true;
+  }
+}
+
+interface ExtendedTypographyOptions extends TypographyOptions {
+  h1_Headline: React.CSSProperties;
+  body1_Bold: React.CSSProperties;
+}
 const pallet = {
   primary: {
     light: '#a7d7c5',
@@ -62,21 +72,36 @@ const theme = createTheme({
   },
   typography: {
     fontFamily: 'Poppins, Arial, sans-serif',
-    fontSize: 14,
     h1: {
       ...typography.h1,
+      color: pallet.grey.dark,
+    },
+    h1_Headline: {
+      ...typography.h1_Headline,
       color: pallet.grey.dark,
     },
     h2: {
       ...typography.h2,
       fontWeight: 500,
     },
+    h3: { ...typography.h3, color: pallet.primary.main },
+    subtitle1: {
+      ...typography.subtitle1,
+      color: pallet.grey.dark,
+    },
     body1: {
       color: pallet.grey.main,
       ...typography.body1,
     },
-  },
-  ...styleOverrides
+    body1_Bold: {
+      color: pallet.grey.dark,
+      ...typography.body1_Bold,
+    },
+    body2: {
+      color: pallet.primary.main,
+      ...typography.body2,
+    },
+  } as ExtendedTypographyOptions,
+  ...styleOverrides,
 });
-
 export default theme;

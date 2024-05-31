@@ -6,8 +6,21 @@ import '@fontsource/poppins/600.css';
 
 import { Color } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
+import { TypographyOptions } from '@mui/material/styles/createTypography';
 import { typography } from './typography';
 import { styleOverrides } from './overrides';
+
+declare module '@mui/material/Typography' {
+  interface TypographyPropsVariantOverrides {
+    h1_Headline: true;
+    body1_Bold: true;
+  }
+}
+
+interface ExtendedTypographyOptions extends TypographyOptions {
+  h1_Headline: React.CSSProperties;
+  body1_Bold: React.CSSProperties;
+}
 
 const pallet = {
   primary: {
@@ -17,7 +30,9 @@ const pallet = {
     contrastText: '#ffffff',
   },
   secondary: {
+    light: '#eaeeff',
     main: '#7b9ffe',
+    dark: '#2965ea',
     contrastText: '#ffffff',
   },
   success: {
@@ -58,20 +73,32 @@ const theme = createTheme({
       ...typography.h1,
       color: pallet.grey.dark,
     },
+    h1_Headline: {
+      ...typography.h1_Headline,
+      color: pallet.grey.dark,
+    },
     h2: {
       ...typography.h2,
       fontWeight: 500,
     },
     h3: { ...typography.h3, color: pallet.primary.main },
     subtitle1: {
-      color: pallet.grey.dark,
       ...typography.subtitle1,
+      color: pallet.grey.dark,
     },
     body1: {
       color: pallet.grey.main,
       ...typography.body1,
     },
-  },
+    body1_Bold: {
+      color: pallet.grey.dark,
+      ...typography.body1_Bold,
+    },
+    body2: {
+      color: pallet.primary.main,
+      ...typography.body2,
+    },
+  } as ExtendedTypographyOptions,
   ...styleOverrides,
 });
 

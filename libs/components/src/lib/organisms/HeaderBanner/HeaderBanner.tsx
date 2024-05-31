@@ -3,8 +3,6 @@ import { Container, Grid, Typography } from '@mui/material';
 import Banner from '../../atoms/Banner/Banner';
 
 export interface HeaderBannerProps {
-  background: string;
-  gridSplit: [3, 9] | [6, 6] | [9, 3];
   title: string;
   intro: string;
   image: {
@@ -14,28 +12,33 @@ export interface HeaderBannerProps {
     alt: string;
     imgTitle?: string;
   };
+  h1_Headline?: boolean;
+  gridSplit?: [number, number];
 }
 
 export function HeaderBanner({
-  background,
-  gridSplit = [6, 6],
   title,
   intro,
   image,
+  h1_Headline = false,
+  gridSplit = [6, 6],
 }: HeaderBannerProps) {
   const { src, height, width, alt, imgTitle = alt } = image;
 
   return (
-    <Banner background={background}>
+    <Banner background="grey.light">
       <Container>
         <Grid container spacing={{ xs: 2, md: 3 }}>
-          <Grid item md={gridSplit[0]} xs={1}>
-            <Typography variant="h1" sx={{ mb: 3 }}>
+          <Grid item md={gridSplit[0]} xs={12}>
+            <Typography
+              variant={h1_Headline ? 'h1_Headline' : 'h1'}
+              sx={{ mb: 3 }}
+            >
               {title}
             </Typography>
-            <Typography variant="body1"> {intro}</Typography>
+            <Typography variant="body1">{intro}</Typography>
           </Grid>
-          <Grid item md={gridSplit[1]} xs={1}>
+          <Grid item md={gridSplit[1]} xs={12}>
             <Image
               src={src}
               alt={alt}

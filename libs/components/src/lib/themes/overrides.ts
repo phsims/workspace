@@ -18,6 +18,12 @@ export const styleOverrides = {
         },
       },
     },
-    
+    MuiTypography: {
+      defaultProps: {
+        variantMapping: {
+          h1_Headline: "h1",
+        }
+      },
+    }
   },
 };

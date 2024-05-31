@@ -6,15 +6,13 @@ import { expect } from '@storybook/jest';
 
 const meta: Meta<typeof HeaderBanner> = {
   component: HeaderBanner,
-  title: '@organisms/HeaderBanner',
+  title: '@molecules/HeaderBanner',
 };
 export default meta;
 type Story = StoryObj<typeof HeaderBanner>;
 
 export const Primary = {
   args: {
-    background: 'grey.light',
-    gridSplit: [9, 3],
     title: 'Find Your Favorite Recipes with Ease',
     intro:
       "Explore a world of culinary delights with our extensive collection of recipes. Whether you're looking for quick weeknight dinners, healthy meal options, or indulgent treats, our recipe cards offer something for everyone. Browse, save, and start cooking today!",
