@@ -11,7 +11,6 @@ export default async function Recipes() {
   const data = await getRecipes();
 
   const headerBannerContent: HeaderBannerProps = {
-    background: 'grey.light',
     gridSplit: [9, 3],
     title: 'Find Your Favorite Recipes with Ease',
     intro:
