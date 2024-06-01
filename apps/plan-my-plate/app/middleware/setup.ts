@@ -5,6 +5,7 @@ const env = process.env.VERCEL_ENV;
 
 export interface ConfigProps {
   baseUrl: string;
+  imgUrl: string;
   headers: {
     [key: string]: string;
   };

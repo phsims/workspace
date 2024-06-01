@@ -57,8 +57,8 @@ export const typography = {
   },
   body1_Bold: {
     fontSize: '1rem',
-    fontWeight: 600,
     marginBottom: '1rem',
+    fontWeight: 600,
   },
   body2: {
     fontSize: '1rem',

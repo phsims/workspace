@@ -14,4 +14,11 @@ describe('RecipeDetails', () => {
     const { baseElement } = render(<RecipeDetails {...mockRecipe} />);
     expect(baseElement).toBeTruthy();
   });
+
+  it('should match snapshot', () => {
+    const { baseElement } = render(<RecipeDetails {...mockRecipe} />);
+    expect(baseElement).toMatchSnapshot();
+  } );
+
+  
 });

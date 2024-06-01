@@ -33,6 +33,6 @@ export const Heading: Story = {
   args: { ...Primary.args },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    expect(canvas.getByText(/Welcome to RecipeDetails!/gi)).toBeInTheDocument();
+    expect(canvas.getByText(/My Asian Calamari/gi)).toBeInTheDocument();
   },
 };

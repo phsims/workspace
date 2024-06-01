@@ -22,6 +22,7 @@ export const styleOverrides = {
       defaultProps: {
         variantMapping: {
           h1_Headline: "h1",
+          body1_Bold: "p",
         }
       },
     }

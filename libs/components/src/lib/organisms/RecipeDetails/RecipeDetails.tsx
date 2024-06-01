@@ -6,10 +6,9 @@ import RestaurantRoundedIcon from '@mui/icons-material/RestaurantRounded';
 import RatingComponent from '../../atoms/Rating/RatingComponent';
 import formatTime from '../../utils/formatTime';
 import Nutrients, { Nutrient } from '../../atoms/Nutrients/Nutrients';
+import InfoIcon from '../../atoms/InfoIcon/InfoIcon';
 
 export interface RecipeDetailsProps {
-  sourceName: string;
-  sourceUrl: string;
   recipeImg: string;
   title: string;
   servings: number;
@@ -44,41 +43,50 @@ export function RecipeDetails({
           }}
         />
       </Grid>
-      <Grid item md={6} xs={12}>
-        <Typography variant="h1">{title}</Typography>
-        <Box
-          sx={{
-            mb: '1.5rem',
-          }}
-        >
-          <RatingComponent itemRating={rating} />
-        </Box>
+      <Grid
+        item
+        md={6}
+        xs={12}
+        sx={{
+          display: 'flex',
+          alignItems: 'stretch',
+          flexDirection: 'column',
+          justifyContent: 'space-between',
+        }}
+      >
+        <Grid item xs={12}>
+          <Typography variant="h1">{title}</Typography>
 
-        <Box sx={{ display: 'flex', flexDirection: 'row', gap: '0.5rem' }}>
-          <RestaurantRoundedIcon fontSize="medium" color="primary" />
-          <Typography variant="body1_Bold" color={'grey.dark'}>
-            Serves:
-          </Typography>
-          <Typography variant="body1" color={'grey.dark'}>
-            {servings}
-          </Typography>
-        </Box>
+          <RatingComponent itemRating={rating || 0} />
+        </Grid>
 
-        <Box sx={{ display: 'flex', flexDirection: 'row', gap: '0.5rem' }}>
-          <AccessAlarmRoundedIcon color="primary" fontSize="medium" />
-          <Typography variant="body1_Bold" color={'grey.dark'}>
-            Ready in:
-          </Typography>
-          <Typography variant="body1" color={'grey.dark'}>
-            {formatTime(readyInMinutes)}
-          </Typography>
-        </Box>
+        <Grid item xs={12} sx={{
+           display: 'flex',
+           flexDirection: 'column',
+           justifyContent: 'center',
+        }}>
+          <InfoIcon
+            icon={<RestaurantRoundedIcon fontSize="medium" color="primary" />}
+            infoTitle="Serves:"
+            text={servings.toString()}
+          />
 
-        {nutrients.length > 0 && (
-          <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-            <Typography variant="body1_Bold" color={'grey.dark'}></Typography>
-            <Nutrients title="Nutritional information" nutrients={nutrients} />
-          </Box>
+          <InfoIcon
+            icon={<AccessAlarmRoundedIcon color="primary" fontSize="medium" />}
+            infoTitle="Ready in:"
+            text={formatTime(readyInMinutes)}
+          />
+        </Grid>
+
+        {nutrients?.length > 0 && (
+          <Grid item xs={12}>
+            <Box sx={{ mt: '1.5rem' }}>
+              <Nutrients
+                title="Nutritional information:"
+                nutrients={nutrients}
+              />
+            </Box>
+          </Grid>
         )}
       </Grid>
     </Grid>

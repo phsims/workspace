@@ -33,41 +33,43 @@ export function Nutrients({ nutrients, title }: NutrientsProps) {
   }
 
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'row', gap: '0.5rem', mb: 1 }}>
+    <>
       <Typography variant="body1_Bold" color={'grey.dark'}>
         {title}
       </Typography>
-      {filteredNutrients.map(({ name, amount, unit }) => (
-        <Box
-          key={name}
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            padding: '0.5rem',
-            backgroundColor: 'success.light',
-            borderRadius: '0.5rem',
-            alignItems: 'center',
-          }}
-        >
-          <Typography
-            variant="body1_Bold"
-            color={'grey.dark'}
-            sx={{ mb: 0 }}
-            fontSize="small"
+      <Box sx={{ display: 'flex', flexDirection: 'row', gap: '0.5rem', mb: 1 }}>
+        {filteredNutrients.map(({ name, amount, unit }) => (
+          <Box
+            key={name}
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              padding: '0.5rem',
+              backgroundColor: 'success.light',
+              borderRadius: '0.5rem',
+              alignItems: 'center',
+            }}
           >
-            {getTitle(name)}
-          </Typography>
-          <Typography
-            variant="body1"
-            color={'grey.dark'}
-            sx={{ mb: 0 }}
-            fontSize="small"
-          >
-            {amount} {name === 'Calories' ? '' : unit}
-          </Typography>
-        </Box>
-      ))}
-    </Box>
+            <Typography
+              variant="body1_Bold"
+              color={'grey.dark'}
+              sx={{ mb: 0 }}
+              fontSize="small"
+            >
+              {getTitle(name)}
+            </Typography>
+            <Typography
+              variant="body1"
+              color={'grey.dark'}
+              sx={{ mb: 0 }}
+              fontSize="small"
+            >
+              {amount} {name === 'Calories' ? '' : unit}
+            </Typography>
+          </Box>
+        ))}
+      </Box>{' '}
+    </>
   );
 }
 

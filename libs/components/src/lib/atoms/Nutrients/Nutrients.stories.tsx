@@ -13,6 +13,7 @@ type Story = StoryObj<typeof Nutrients>;
 
 export const Primary = {
   args: {
+    title:"Nutritional information:",
     nutrients:  mockNutrients,
   },
 };
@@ -21,6 +22,6 @@ export const Heading: Story = {
   args: { ...Primary.args },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    expect(canvas.getByText(/Welcome to Nutrients!/gi)).toBeInTheDocument();
+    expect(canvas.getByText(/Nutritional information:/gi)).toBeInTheDocument();
   },
 };
