@@ -82,5 +82,16 @@
     "build-custom-server": {
       "cache": true
     }
+  },
+  "nxCloudAccessToken": "YTYzNDg0NWYtYTllYy00OWFiLThlYjctMmJjMzliYWY0OTAzfHJlYWQtd3JpdGU=",
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@vercel/remote-nx",
+      "options": {
+        "cacheableOperations": ["build", "test", "lint", "e2e"],
+        "token": "<token>",
+        "teamId": "<teamId>"
+      }
+    }
   }
 }
