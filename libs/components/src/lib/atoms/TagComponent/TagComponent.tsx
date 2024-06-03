@@ -19,9 +19,9 @@ export function TagComponent({
   varient = 'filled',
 }: TagComponentProps) {
   return (
-    <Box sx={{mb:3}}>
-      <Typography variant="h5" mb='0.5rem'>{title}</Typography>
-      <Stack spacing={1} alignItems="center" direction="row" >
+    <Box >
+      <Typography variant="h6" mb='0.5rem'>{title}</Typography>
+      <Stack spacing={1} alignItems="center" direction="row" flexWrap='wrap' useFlexGap>
         {tags.map((tag) => (
           <Chip label={tag} color={color} variant={varient}/>
         ))}

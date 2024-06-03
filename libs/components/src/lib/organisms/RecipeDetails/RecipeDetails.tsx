@@ -1,15 +1,16 @@
-
-
-
 import Image from 'next/image';
-import { Grid, Typography, Box } from '@mui/material';
+import { Grid, Typography, Box, Tooltip } from '@mui/material';
 import AccessAlarmRoundedIcon from '@mui/icons-material/AccessAlarmRounded';
 import RestaurantRoundedIcon from '@mui/icons-material/RestaurantRounded';
+import ThumbUpRoundedIcon from '@mui/icons-material/ThumbUpRounded';
+import CurrencyPoundRoundedIcon from '@mui/icons-material/CurrencyPoundRounded';
 
 import RatingComponent from '../../atoms/Rating/RatingComponent';
 import formatTime from '../../utils/formatTime';
 import Nutrients, { Nutrient } from '../../atoms/Nutrients/Nutrients';
 import InfoIcon from '../../atoms/InfoIcon/InfoIcon';
+import FillIcon from '../../atoms/FillIcon/FillIcon';
+import TagComponent from '../../atoms/TagComponent/TagComponent';
 
 export interface RecipeDetailsProps {
   recipeImg: string;
@@ -17,6 +18,11 @@ export interface RecipeDetailsProps {
   servings: number;
   readyInMinutes: number;
   nutrients: Nutrient[];
+  aggregateLikes: number;
+  healthScore: number;
+  dishTypes: string[];
+  cuisines: string[];
+  diets: string[];
 }
 
 export function RecipeDetails({
@@ -24,12 +30,18 @@ export function RecipeDetails({
   title,
   servings,
   readyInMinutes,
-
   nutrients,
+  aggregateLikes,
+  healthScore,
+  dishTypes,
+  cuisines,
+  diets,
 }: RecipeDetailsProps) {
-
+  const cheap=true
+  const sustainable=true
   return (
     <Grid container spacing={{ xs: 2, md: 3 }}>
+      <Typography variant="h1">{title}</Typography>
       <Grid item md={6} xs={12}>
         <Image
           src={recipeImg}
@@ -46,7 +58,8 @@ export function RecipeDetails({
       </Grid>
       <Grid
         item
-        md={6}
+        md={4}
+        sm={6}
         xs={12}
         sx={{
           display: 'flex',
@@ -55,17 +68,8 @@ export function RecipeDetails({
           justifyContent: 'space-between',
         }}
       >
-        <Grid item xs={12}>
-          <Typography variant="h1">{title}</Typography>
-
-          <RatingComponent itemRating={ 0} />
-        </Grid>
-
-        <Grid item xs={12} sx={{
-           display: 'flex',
-           flexDirection: 'column',
-           justifyContent: 'center',
-        }}>
+        <Grid item xs={12} >
+          <RatingComponent itemRating={0} />
           <InfoIcon
             icon={<RestaurantRoundedIcon fontSize="medium" color="primary" />}
             infoTitle="Serves:"
@@ -79,9 +83,35 @@ export function RecipeDetails({
           />
         </Grid>
 
+        <Grid
+          item
+          xs={12}
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+          }}
+        >
+          <InfoIcon
+            infoTitle={`Health score ${healthScore}`}
+            icon={
+              <FillIcon
+                fillPercentage={healthScore}
+                ariaLabel={`Health score ${healthScore}`}
+              />
+            }
+          />
+          {aggregateLikes && (
+            <InfoIcon
+              infoTitle={`${aggregateLikes} likes`}
+              icon={<ThumbUpRoundedIcon color="secondary" fontSize="medium" />}
+            />
+          )}
+        </Grid>
+
         {nutrients?.length > 0 && (
           <Grid item xs={12}>
-            <Box >
+            <Box>
               <Nutrients
                 title="Nutritional information:"
                 nutrients={nutrients}
@@ -89,6 +119,21 @@ export function RecipeDetails({
             </Box>
           </Grid>
         )}
+      </Grid>
+      <Grid item xs={12} sm={6} md={2} sx={{display:'flex' , flexDirection:'column',gap:1}}>
+
+   
+        {dishTypes?.length > 0 && (
+          <TagComponent tags={dishTypes} varient="outlined" title='Great for:'/>
+        )}
+        {cuisines?.length > 0 && (
+          <TagComponent  tags={cuisines} varient="outlined" color="success" title='Cuisine:'/>
+        )}
+        {diets?.length > 0 && (
+          <TagComponent tags={diets} varient="outlined"  color="secondary" title='Suitable for:'/>
+        )}
+
+
       </Grid>
     </Grid>
   );

@@ -6,6 +6,11 @@ exports[`RecipeDetails should match snapshot 1`] = `
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-spacing-md-3 css-1xgjpwf-MuiGrid-root"
     >
+      <h1
+        class="MuiTypography-root MuiTypography-h1 css-o2w69a-MuiTypography-root"
+      >
+        My Asian Calamari
+      </h1>
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-1fyyp8j-MuiGrid-root"
       >
@@ -23,16 +28,11 @@ exports[`RecipeDetails should match snapshot 1`] = `
         />
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-901xjz-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-s1ku1q-MuiGrid-root"
       >
         <div
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
-          <h1
-            class="MuiTypography-root MuiTypography-h1 css-o2w69a-MuiTypography-root"
-          >
-            My Asian Calamari
-          </h1>
           <span
             class="MuiRating-root MuiRating-sizeLarge css-1usiq4q-MuiRating-root"
             color="warning.main"
@@ -399,10 +399,6 @@ exports[`RecipeDetails should match snapshot 1`] = `
               </span>
             </label>
           </span>
-        </div>
-        <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-15q8tmm-MuiGrid-root"
-        >
           <div
             class="MuiBox-root css-1f0wxn3"
           >
@@ -455,6 +451,95 @@ exports[`RecipeDetails should match snapshot 1`] = `
           </div>
         </div>
         <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-15q8tmm-MuiGrid-root"
+        >
+          <div
+            class="MuiBox-root css-1f0wxn3"
+          >
+            <div
+              class="MuiBox-root css-djwqx3"
+            >
+              <svg
+                aria-hidden="true"
+                aria-label="Health score 12"
+                class="MuiSvgIcon-root MuiSvgIcon-colorSuccess MuiSvgIcon-fontSizeMedium css-4b67si-MuiSvgIcon-root"
+                data-testid="FavoriteBorderRoundedIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19.66 3.99c-2.64-1.8-5.9-.96-7.66 1.1-1.76-2.06-5.02-2.91-7.66-1.1-1.4.96-2.28 2.58-2.34 4.29-.14 3.88 3.3 6.99 8.55 11.76l.1.09c.76.69 1.93.69 2.69-.01l.11-.1c5.25-4.76 8.68-7.87 8.55-11.75-.06-1.7-.94-3.32-2.34-4.28M12.1 18.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05"
+                />
+              </svg>
+              <div
+                class="MuiBox-root css-v0jgcu"
+              >
+                <svg
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <defs>
+                    <lineargradient
+                      id="dynamic-gradient"
+                      x1="0"
+                      x2="0"
+                      y1="100%"
+                      y2="0"
+                    >
+                      <stop
+                        offset="12%"
+                        stop-color="#2e7d32"
+                      />
+                      <stop
+                        offset="12%"
+                        stop-color="transparent"
+                      />
+                    </lineargradient>
+                  </defs>
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="FavoriteRoundedIcon"
+                    focusable="false"
+                    style="fill: url(#dynamic-gradient);"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M13.35 20.13c-.76.69-1.93.69-2.69-.01l-.11-.1C5.3 15.27 1.87 12.16 2 8.28c.06-1.7.93-3.33 2.34-4.29 2.64-1.8 5.9-.96 7.66 1.1 1.76-2.06 5.02-2.91 7.66-1.1 1.41.96 2.28 2.59 2.34 4.29.14 3.88-3.3 6.99-8.55 11.76z"
+                    />
+                  </svg>
+                </svg>
+              </div>
+            </div>
+            <span
+              class="MuiTypography-root MuiTypography-body1_Bold css-yylahi-MuiTypography-root"
+            >
+              Health score 12
+            </span>
+          </div>
+          <div
+            class="MuiBox-root css-1f0wxn3"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-kw0y8f-MuiSvgIcon-root"
+              data-testid="ThumbUpRoundedIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M13.12 2.06 7.58 7.6c-.37.37-.58.88-.58 1.41V19c0 1.1.9 2 2 2h9c.8 0 1.52-.48 1.84-1.21l3.26-7.61C23.94 10.2 22.49 8 20.34 8h-5.65l.95-4.58c.1-.5-.05-1.01-.41-1.37-.59-.58-1.53-.58-2.11.01M3 21c1.1 0 2-.9 2-2v-8c0-1.1-.9-2-2-2s-2 .9-2 2v8c0 1.1.9 2 2 2"
+              />
+            </svg>
+            <span
+              class="MuiTypography-root MuiTypography-body1_Bold css-yylahi-MuiTypography-root"
+            >
+              3 likes
+            </span>
+          </div>
+        </div>
+        <div
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         >
           <div
@@ -501,6 +586,70 @@ exports[`RecipeDetails should match snapshot 1`] = `
               </div>
             </div>
              
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-2 css-1esxuce-MuiGrid-root"
+      >
+        <div
+          class="MuiBox-root css-0"
+        >
+          <h6
+            class="MuiTypography-root MuiTypography-h6 css-1kx63bm-MuiTypography-root"
+          >
+            Great for:
+          </h6>
+          <div
+            class="MuiStack-root css-1dtqmwz-MuiStack-root"
+          >
+            <div
+              class="MuiChip-root MuiChip-outlined MuiChip-sizeMedium MuiChip-colorPrimary MuiChip-outlinedPrimary css-gww9aq-MuiChip-root"
+            >
+              <span
+                class="MuiChip-label MuiChip-labelMedium css-1jzq0dw-MuiChip-label"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-0"
+        >
+          <h6
+            class="MuiTypography-root MuiTypography-h6 css-1kx63bm-MuiTypography-root"
+          >
+            Cuisine:
+          </h6>
+          <div
+            class="MuiStack-root css-1dtqmwz-MuiStack-root"
+          >
+            <div
+              class="MuiChip-root MuiChip-outlined MuiChip-sizeMedium MuiChip-colorSuccess MuiChip-outlinedSuccess css-rmbuyw-MuiChip-root"
+            >
+              <span
+                class="MuiChip-label MuiChip-labelMedium css-1jzq0dw-MuiChip-label"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-0"
+        >
+          <h6
+            class="MuiTypography-root MuiTypography-h6 css-1kx63bm-MuiTypography-root"
+          >
+            Suitable for:
+          </h6>
+          <div
+            class="MuiStack-root css-1dtqmwz-MuiStack-root"
+          >
+            <div
+              class="MuiChip-root MuiChip-outlined MuiChip-sizeMedium MuiChip-colorSecondary MuiChip-outlinedSecondary css-3iing3-MuiChip-root"
+            >
+              <span
+                class="MuiChip-label MuiChip-labelMedium css-1jzq0dw-MuiChip-label"
+              />
+            </div>
           </div>
         </div>
       </div>

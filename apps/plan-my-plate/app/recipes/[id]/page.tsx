@@ -8,8 +8,6 @@ import {
   Typography,
 } from '@mui/material';
 import StickyNote2RoundedIcon from '@mui/icons-material/StickyNote2Rounded';
-import ThumbUpRoundedIcon from '@mui/icons-material/ThumbUpRounded';
-import CurrencyPoundRoundedIcon from '@mui/icons-material/CurrencyPoundRounded';
 import DOMPurify from 'isomorphic-dompurify';
 
 import {
@@ -78,7 +76,6 @@ export default async function Page({ params }: IdProps) {
     instructions,
     aggregateLikes,
     healthScore,
-    cheap,
   } = await getData(params?.id);
 
   const largImage = `${imgUrl}/recipes/${params.id}-636x393.jpg`;
@@ -89,6 +86,11 @@ export default async function Page({ params }: IdProps) {
     servings,
     readyInMinutes,
     nutrients,
+    aggregateLikes,
+    healthScore,
+    dishTypes,
+    cuisines,
+    diets
   };
 
   const cleanSummery = DOMPurify.sanitize(summary);
@@ -102,55 +104,6 @@ export default async function Page({ params }: IdProps) {
       <Banner background="grey.light">
         <Container>
           <RecipeDetails {...recipeData} />
-        </Container>
-      </Banner>
-      <Banner background="secondary.light" size="small">
-        <Container sx={{ display: 'flex', flexDirection: 'row', gap: 8, justifyContent:'space-between' }}>
-          {dishTypes?.length > 0 && (
-            <TagComponent
-              title="Great for"
-              tags={dishTypes}
-              varient="filled"
-            />
-          )}
-          {cuisines?.length > 0 && (
-            <TagComponent title="Cuisine" tags={cuisines} varient="filled"/>
-          )}
-          {diets?.length > 0 && (
-            <TagComponent
-              title="Suitable for"
-              tags={diets}
-              varient="filled"
-              color="success"
-            />
-          )}
-          <Box>
-            {cheap && (
-              <InfoIcon
-                infoTitle={`Low cost`}
-                icon={
-                  <CurrencyPoundRoundedIcon color="success" fontSize="medium" />
-                }
-              />
-            )}
-            <InfoIcon
-              infoTitle={`Health score ${healthScore}`}
-              icon={
-                <FillIcon
-                  fillPercentage={healthScore}
-                  ariaLabel={`Health score ${healthScore}`}
-                />
-              }
-            />
-            {aggregateLikes && (
-              <InfoIcon
-                infoTitle={`${aggregateLikes} likes`}
-                icon={
-                  <ThumbUpRoundedIcon color="secondary" fontSize="medium" />
-                }
-              />
-            )}
-          </Box>
         </Container>
       </Banner>
       <Banner>
