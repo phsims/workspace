@@ -83,7 +83,7 @@
       "cache": true
     }
   },
-  "nxCloudAccessToken": "YTYzNDg0NWYtYTllYy00OWFiLThlYjctMmJjMzliYWY0OTAzfHJlYWQtd3JpdGU=",
+  "nxCloudAccessToken": process.env.NX_CLOUD_TOKEN,
   "tasksRunnerOptions": {
     "default": {
       "runner": "@vercel/remote-nx",
