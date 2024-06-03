@@ -18,6 +18,10 @@ export const Primary = {
     icon: <RestaurantRoundedIcon fontSize="medium" color="primary" />,
     infoTitle: 'Serves:',
     text: '4',
+    link:{
+      href: 'https://www.example.com',
+      text: 'Link to recipe',
+    }
   },
 };
 

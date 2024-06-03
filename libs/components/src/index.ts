@@ -1,3 +1,4 @@
+export * from './lib/atoms/FillIcon/FillIcon';
 export * from './lib/atoms/InfoIcon/InfoIcon';
 export * from './lib/atoms/TagComponent/TagComponent';
 export * from './lib/atoms/Nutrients/Nutrients';

@@ -1,12 +1,17 @@
+
+"use client";
 import {Rating} from '@mui/material';
 import StarIcon from '@mui/icons-material/Star';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
+import { useState } from 'react';
 
 export interface RatingProps {
-  itemRating: number;
+  itemRating: number|null;
 }
 
 export function RatingComponent({ itemRating }: RatingProps) {
+  const [rating, setRating] = useState<number|null>(itemRating);
+  
   return (
     <Rating
       color="warning.main"
@@ -16,7 +21,10 @@ export function RatingComponent({ itemRating }: RatingProps) {
       icon={<StarIcon fontSize="inherit" />}
       emptyIcon={<StarBorderIcon fontSize="inherit" />}
       size="large"
-      value={itemRating}
+      value={rating}
+      onChange={(_event, newValue) => {
+        setRating(newValue);
+      }}
       sx={{
         '& .MuiRating-iconFilled': {
           color: 'primary.main',

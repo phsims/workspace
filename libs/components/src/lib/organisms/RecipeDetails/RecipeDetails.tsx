@@ -1,3 +1,6 @@
+
+
+
 import Image from 'next/image';
 import { Grid, Typography, Box } from '@mui/material';
 import AccessAlarmRoundedIcon from '@mui/icons-material/AccessAlarmRounded';
@@ -13,7 +16,6 @@ export interface RecipeDetailsProps {
   title: string;
   servings: number;
   readyInMinutes: number;
-  spoonacularScore: number;
   nutrients: Nutrient[];
 }
 
@@ -22,10 +24,9 @@ export function RecipeDetails({
   title,
   servings,
   readyInMinutes,
-  spoonacularScore,
+
   nutrients,
 }: RecipeDetailsProps) {
-  const rating = Math.round((spoonacularScore / 20) * 2) / 2;
 
   return (
     <Grid container spacing={{ xs: 2, md: 3 }}>
@@ -57,7 +58,7 @@ export function RecipeDetails({
         <Grid item xs={12}>
           <Typography variant="h1">{title}</Typography>
 
-          <RatingComponent itemRating={rating || 0} />
+          <RatingComponent itemRating={ 0} />
         </Grid>
 
         <Grid item xs={12} sx={{
@@ -80,7 +81,7 @@ export function RecipeDetails({
 
         {nutrients?.length > 0 && (
           <Grid item xs={12}>
-            <Box sx={{ mt: '1.5rem' }}>
+            <Box >
               <Nutrients
                 title="Nutritional information:"
                 nutrients={nutrients}
