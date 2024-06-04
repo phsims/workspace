@@ -1,31 +1,23 @@
 import { Box, Typography } from '@mui/material';
+import {Nutrient} from '../../types/Nutrient';
 
 export interface NutrientsProps {
   nutrients: Nutrient[];
   title?: string;
 }
 
-export interface Nutrient {
-  name: string;
-  amount: number;
-  unit: string;
-}
+
 
 export function Nutrients({ nutrients, title }: NutrientsProps) {
-  const viewNutrients = ['Calories', 'Fat', 'Carbohydrates', 'Protein'];
-  const filteredNutrients = nutrients
-    ? nutrients.filter((nutrient) => viewNutrients.includes(nutrient.name))
-    : [];
-
   function getTitle(name: string) {
     switch (name) {
-      case 'Calories':
+      case 'calories':
         return 'kcal';
-      case 'Fat':
+      case 'fat':
         return 'Fat';
-      case 'Carbohydrates':
+      case 'carbohydrates':
         return 'Carbs';
-      case 'Protein':
+      case 'protein':
         return 'Protein';
       default:
         return name;
@@ -37,12 +29,21 @@ export function Nutrients({ nutrients, title }: NutrientsProps) {
       <Typography variant="body1_Bold" color={'grey.dark'}>
         {title}
       </Typography>
-      <Box sx={{ display: 'flex', flexDirection: 'row', gap: '0.5rem', mb: 1 }}>
-        {filteredNutrients.map(({ name, amount, unit }) => (
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'row',
+          gap: '0.5rem',
+          mb: 1,
+          justifyContent: 'space-between',
+        }}
+      >
+        {nutrients.map(({ name, value }) => (
           <Box
             key={name}
             sx={{
               display: 'flex',
+              flex: 1,
               flexDirection: 'column',
               padding: '0.5rem',
               backgroundColor: 'success.light',
@@ -64,11 +65,11 @@ export function Nutrients({ nutrients, title }: NutrientsProps) {
               sx={{ mb: 0 }}
               fontSize="small"
             >
-              {amount} {name === 'Calories' ? '' : unit}
+              {value}
             </Typography>
           </Box>
         ))}
-      </Box>{' '}
+      </Box>
     </>
   );
 }

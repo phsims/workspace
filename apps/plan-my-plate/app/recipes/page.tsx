@@ -5,28 +5,10 @@ import {
   Banner,
   RecipeCardGrid,
 } from '@workspace/components';
-import { getSpoonConfig } from '../middleware/setup';
-
-async function getData() {
-  const { baseUrl, headers } = getSpoonConfig();
-  try {
-    const res = await fetch(`${baseUrl}/recipes/random?number=9`, {
-      headers,
-    });
-
-    if (!res.ok) {
-      throw new Error('Failed to fetch data');
-    }
-
-    return res.json();
-  } catch (e) {
-    console.error(e);
-    throw e;
-  }
-}
+import { getRandomRecipes } from '../utils';
 
 export default async function Recipes() {
-  const data = await getData();
+  const data = await getRandomRecipes();
 
   const headerBannerContent: HeaderBannerProps = {
     title: 'Find Your Favorite Recipes with Ease',

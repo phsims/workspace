@@ -4,7 +4,7 @@ import { Container, Grid, Typography } from '@mui/material';
 import { Banner, HeaderBanner, HeaderBannerProps } from '@workspace/components';
 import { FeatureCard, FeatureCardProps } from '@workspace/components';
 
-import { features } from './__fixtures__/features';
+import { features } from './utils/data/features';
 
 const headerBannerContent: HeaderBannerProps = {
   h1_Headline: true,

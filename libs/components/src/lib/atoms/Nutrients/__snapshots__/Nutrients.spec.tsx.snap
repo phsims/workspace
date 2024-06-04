@@ -7,25 +7,24 @@ exports[`Nutrients should match snapshot 1`] = `
       class="MuiTypography-root MuiTypography-body1_Bold css-yylahi-MuiTypography-root"
     />
     <div
-      class="MuiBox-root css-1hf8v5l"
+      class="MuiBox-root css-pg4npi"
     >
       <div
-        class="MuiBox-root css-c2tbbu"
+        class="MuiBox-root css-1r6wdtb"
       >
         <span
           class="MuiTypography-root MuiTypography-body1_Bold css-1el569k-MuiTypography-root"
         >
-          kcal
+          Calories
         </span>
         <p
           class="MuiTypography-root MuiTypography-body1 css-1k4wxgx-MuiTypography-root"
         >
           316.49
-           
         </p>
       </div>
       <div
-        class="MuiBox-root css-c2tbbu"
+        class="MuiBox-root css-1r6wdtb"
       >
         <span
           class="MuiTypography-root MuiTypography-body1_Bold css-1el569k-MuiTypography-root"
@@ -36,12 +35,9 @@ exports[`Nutrients should match snapshot 1`] = `
           class="MuiTypography-root MuiTypography-body1 css-1k4wxgx-MuiTypography-root"
         >
           12.09
-           
-          g
         </p>
       </div>
     </div>
-     
   </div>
 </body>
 `;

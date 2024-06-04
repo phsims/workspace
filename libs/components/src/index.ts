@@ -20,3 +20,6 @@ export * from './lib/themes/ThemeProvider';
 
 // mocks
 export * from './lib/__mocks__';
+
+// types
+export * from './lib/types';
