@@ -83,7 +83,6 @@
       "cache": true
     }
   },
-  "nxCloudAccessToken": "${NX_ACCESS_TOKEN}",
   "tasksRunnerOptions": {
     "default": {
       "runner": "@vercel/remote-nx",
@@ -93,5 +92,6 @@
         "teamId": "<teamId>"
       }
     }
-  }
+  },
+  "nxCloudAccessToken": "${NX_CLOUD_ACCESS_TOKEN}"
 }
