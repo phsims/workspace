@@ -82,5 +82,9 @@
     "build-custom-server": {
       "cache": true
     }
+  },
+  "runner": "@nrwl/nx-cloud",
+  "options": {
+    "cacheDirectory": "/tmp/nx-cache"
   }
 }
