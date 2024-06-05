@@ -34,4 +34,3 @@ jobs:
       - run: npx nx-cloud record -- nx format:check
 
       - run: npx nx affected -t lint test build 
-
