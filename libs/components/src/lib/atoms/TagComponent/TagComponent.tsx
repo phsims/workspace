@@ -23,7 +23,7 @@ export function TagComponent({
       <Typography variant="h6" mb='0.5rem'>{title}</Typography>
       <Stack spacing={1} alignItems="center" direction="row" flexWrap='wrap' useFlexGap>
         {tags.map((tag) => (
-          <Chip label={tag} color={color} variant={varient}/>
+          <Chip label={tag} color={color} variant={varient} key={tag}/>
         ))}
       </Stack>
     </Box>
