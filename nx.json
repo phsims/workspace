@@ -83,15 +83,9 @@
       "cache": true
     }
   },
-  "tasksRunnerOptions": {
-    "default": {
-      "runner": "@vercel/remote-nx",
-      "options": {
-        "cacheableOperations": ["build", "test", "lint", "e2e"],
-        "token": "<token>",
-        "teamId": "<teamId>"
-      }
-    }
+  "runner": "@nrwl/nx-cloud",
+  "options": {
+    "cacheDirectory": "/tmp/nx-cache"
   },
   "nxCloudAccessToken": "${NX_CLOUD_ACCESS_TOKEN}"
 }
