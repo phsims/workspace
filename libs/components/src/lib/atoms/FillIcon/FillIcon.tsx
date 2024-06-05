@@ -18,8 +18,8 @@ export function FillIcon({fillPercentage,ariaLabel}: FillIconProps) {
         <svg width="24" height="24" viewBox="0 0 24 24">
           <defs>
             <linearGradient id="dynamic-gradient" x1="0" y1="100%" x2="0" y2="0">
-              <stop offset={`${ fillPercentage}%`} stop-color={theme.palette.success.main} />
-              <stop offset={`${ fillPercentage}%`} stop-color="transparent" />
+              <stop offset={`${ fillPercentage}%`} stopColor={theme.palette.success.main} />
+              <stop offset={`${ fillPercentage}%`} stopColor="transparent" />
             </linearGradient>
           </defs>
           <FavoriteRoundedIcon style={{ fill: 'url(#dynamic-gradient)' }} />

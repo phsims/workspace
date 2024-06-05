@@ -8,6 +8,8 @@ export interface RecipeCardGridProps {
 }
 
 export function RecipeCardGrid({ recipes }: RecipeCardGridProps) {
+
+  if(!recipes) return null;
   return (
     <Container>
       {recipes && (

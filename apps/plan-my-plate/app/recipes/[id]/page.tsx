@@ -12,44 +12,19 @@ import DOMPurify from 'isomorphic-dompurify';
 
 import {
   Banner,
-  FillIcon,
   InfoIcon,
+  RecipeCardGrid,
   RecipeDetails,
   RecipeDetailsProps,
-  TagComponent,
 } from '@workspace/components';
-import { getSpoonConfig } from '../../middleware/setup';
+
+import {
+  getNutrition,
+  getRecipe,
+  getImage,
+  getSimilarRecipes,
+} from '../../utils';
 import styles from './page.module.scss';
-
-async function getData(id: number) {
-  const { baseUrl, headers } = getSpoonConfig();
-  try {
-    const info = await fetch(`${baseUrl}/recipes/${id}/information`, {
-      headers,
-    });
-
-    const nutrition = await fetch(
-      `${baseUrl}/recipes/${id}/nutritionWidget.json`,
-      {
-        headers,
-      }
-    );
-
-    if (!info.ok) {
-      throw new Error('Failed to fetch data');
-    }
-
-    const recipeInfo = await info.json();
-    const nutritionalInfo = await nutrition.json();
-
-    const data = { ...recipeInfo, ...nutritionalInfo };
-
-    return data;
-  } catch (e) {
-    console.error(e);
-    throw e;
-  }
-}
 
 export interface IdProps {
   params: {
@@ -57,44 +32,66 @@ export interface IdProps {
   };
 }
 
+interface Measurements{
+  name: string;
+  measures: {
+    metric: {
+      amount: number;
+      unitShort: string;
+    };
+  };
+}
+
 export default async function Page({ params }: IdProps) {
-  const { imgUrl } = getSpoonConfig();
+  const recipe = getRecipe(params?.id);
+  const nutrition = getNutrition(params?.id);
+  const similarRecipes = getSimilarRecipes(params?.id);
+  const largeImage = getImage(params?.id, 'large');
+
+  const [recipeData, nutritionData, similarRecipeData] = await Promise.all([
+    recipe,
+    nutrition,
+    similarRecipes,
+  ])
+    .then(([recipeData, nutritionData, similarRecipeData]) => {
+      return Promise.all([recipeData, nutritionData, similarRecipeData]);
+    })
+    .catch((error) => {
+      console.error('An error occurred:', error);
+      throw error;
+    });
 
   const {
     title,
-    summary,
     servings,
-    image,
     readyInMinutes,
-    nutrients,
-    creditsText,
-    sourceUrl,
+    aggregateLikes,
+    healthScore,
     dishTypes,
     cuisines,
     diets,
+    summary,
+    sourceUrl,
+    creditsText,
     extendedIngredients,
     instructions,
-    aggregateLikes,
-    healthScore,
-  } = await getData(params?.id);
+  } = recipeData;
 
-  const largImage = `${imgUrl}/recipes/${params.id}-636x393.jpg`;
-
-  const recipeData: RecipeDetailsProps = {
-    recipeImg: largImage || image,
+  const recipeDetails: RecipeDetailsProps = {
     title,
     servings,
     readyInMinutes,
-    nutrients,
     aggregateLikes,
     healthScore,
     dishTypes,
     cuisines,
-    diets
+    diets,
+    recipeImg: largeImage,
+    nutrients: nutritionData,
   };
 
+
   const cleanSummery = DOMPurify.sanitize(summary);
-  console.log('aggregateLikes', diets);
   return (
     <>
       <Head>
@@ -103,7 +100,7 @@ export default async function Page({ params }: IdProps) {
 
       <Banner background="grey.light">
         <Container>
-          <RecipeDetails {...recipeData} />
+          <RecipeDetails {...recipeDetails} />
         </Container>
       </Banner>
       <Banner>
@@ -127,11 +124,11 @@ export default async function Page({ params }: IdProps) {
               <Typography variant="h2">Ingredients</Typography>
               <List>
                 {extendedIngredients.map(
-                  ({ name, measures }: any, index: number) => (
+                  ({ name, measures }: Measurements, index: number) => (
                     <ListItem key={index}>
                       <Typography variant="body1_Bold" mb={0} mr={0.5}>
-                        {Math.round(measures?.metric.amount * 4) / 4} {measures?.metric.unitShort}{' '}
-                        {name}
+                        {Math.round(measures?.metric.amount * 4) / 4}{' '}
+                        {measures?.metric.unitShort} {name}
                       </Typography>
                     </ListItem>
                   )
@@ -141,7 +138,7 @@ export default async function Page({ params }: IdProps) {
             <Grid item xs={12} md={8}>
               <Typography variant="h2">Instructions</Typography>
               <Typography
-              className={styles['recipe-instructions']}
+                className={styles['recipe-instructions']}
                 variant="body1"
                 dangerouslySetInnerHTML={{ __html: instructions }}
               />
@@ -149,6 +146,13 @@ export default async function Page({ params }: IdProps) {
           </Grid>
         </Container>
       </Banner>
+      {similarRecipeData && (
+        <Banner>
+          <Container>
+            <RecipeCardGrid recipes={similarRecipeData} />
+          </Container>
+        </Banner>
+      )}
     </>
   );
 }

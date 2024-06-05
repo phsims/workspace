@@ -2,14 +2,10 @@
 export const mockNutrients= [
     {
         "name": "Calories",
-        "amount": 316.49,
-        "unit": "kcal",
-        "percentOfDailyNeeds": 15.82
+        "value": 316.49,
     },
     {
         "name": "Fat",
-        "amount": 12.09,
-        "unit": "g",
-        "percentOfDailyNeeds": 18.6
+        "value": 12.09,
     },
 ]
