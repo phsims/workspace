@@ -86,6 +86,5 @@
   "runner": "@nrwl/nx-cloud",
   "options": {
     "cacheDirectory": "/tmp/nx-cache"
-  },
-  "nxCloudAccessToken": "${NX_CLOUD_ACCESS_TOKEN}"
+  }
 }
