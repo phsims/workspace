@@ -8,8 +8,7 @@ export interface RecipeCardGridProps {
 }
 
 export function RecipeCardGrid({ recipes }: RecipeCardGridProps) {
-
-  if(!recipes) return null;
+  if (!recipes) return null;
   return (
     <Container>
       {recipes && (
@@ -25,7 +24,7 @@ export function RecipeCardGrid({ recipes }: RecipeCardGridProps) {
               sm={6}
               xs={12}
               key={recipe.id}
-              sx={{ display: 'flex' ,  alignItems: 'stretch',}}
+              sx={{ display: 'flex', alignItems: 'stretch' }}
             >
               <RecipeCard {...recipe} />
             </Grid>

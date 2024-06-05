@@ -33,22 +33,22 @@ describe('Page', () => {
     fetch.resetMocks();
   });
 
-it('should render successfully', async () => {
-  (getRecipe as jest.MockedFunction<typeof getRecipe>).mockResolvedValueOnce(
-    mockRecipes.recipes[0]
-  );
-  (
-    getNutrition as jest.MockedFunction<typeof getNutrition>
-  ).mockResolvedValueOnce(mockNutrients);
-  (
-    getSimilarRecipes as jest.MockedFunction<typeof getSimilarRecipes>
-  ).mockResolvedValueOnce([mockRecipes.recipes[0]]);
+  it('should render successfully', async () => {
+    (getRecipe as jest.MockedFunction<typeof getRecipe>).mockResolvedValueOnce(
+      mockRecipes.recipes[0]
+    );
+    (
+      getNutrition as jest.MockedFunction<typeof getNutrition>
+    ).mockResolvedValueOnce(mockNutrients);
+    (
+      getSimilarRecipes as jest.MockedFunction<typeof getSimilarRecipes>
+    ).mockResolvedValueOnce([mockRecipes.recipes[0]]);
 
-  const pageResult = await Page({ params: { id: 12345 } });
-  const { container } = render(pageResult);
+    const pageResult = await Page({ params: { id: 12345 } });
+    const { container } = render(pageResult);
 
-  await waitFor(() => expect(container).toBeDefined());
-});
+    await waitFor(() => expect(container).toBeDefined());
+  });
 
   it('should fetch the data', async () => {
     (getRecipe as jest.MockedFunction<typeof getRecipe>).mockResolvedValueOnce(

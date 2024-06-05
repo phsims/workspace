@@ -32,7 +32,7 @@ export interface IdProps {
   };
 }
 
-interface Measurements{
+interface Measurements {
   name: string;
   measures: {
     metric: {
@@ -89,7 +89,6 @@ export default async function Page({ params }: IdProps) {
     recipeImg: largeImage,
     nutrients: nutritionData,
   };
-
 
   const cleanSummery = DOMPurify.sanitize(summary);
   return (

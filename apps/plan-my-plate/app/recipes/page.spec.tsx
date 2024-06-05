@@ -1,4 +1,3 @@
-
 import fetch from 'jest-fetch-mock';
 import { render } from '@testing-library/react';
 
@@ -6,7 +5,6 @@ import { mockRecipes } from '@workspace/components';
 
 import Recipes from './page';
 import { getRandomRecipes } from '../utils';
-
 
 jest.mock('next/navigation', () => require('next-router-mock'));
 
@@ -24,11 +22,12 @@ describe('Recipes', () => {
   });
 
   it('should fetch the data', async () => {
-    (getRandomRecipes as jest.MockedFunction<typeof getRandomRecipes>).mockResolvedValueOnce(mockRecipes);
+    (
+      getRandomRecipes as jest.MockedFunction<typeof getRandomRecipes>
+    ).mockResolvedValueOnce(mockRecipes);
 
     await Recipes();
 
     expect(getRandomRecipes).toHaveBeenCalled();
   });
-  
 });

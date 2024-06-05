@@ -1,12 +1,10 @@
 import { Box, Typography } from '@mui/material';
-import {Nutrient} from '../../types/Nutrient';
+import { Nutrient } from '../../types/Nutrient';
 
 export interface NutrientsProps {
   nutrients: Nutrient[];
   title?: string;
 }
-
-
 
 export function Nutrients({ nutrients, title }: NutrientsProps) {
   function getTitle(name: string) {

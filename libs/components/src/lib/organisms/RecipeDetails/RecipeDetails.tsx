@@ -37,7 +37,6 @@ export function RecipeDetails({
   cuisines,
   diets,
 }: RecipeDetailsProps) {
-
   return (
     <>
       <Typography variant="h1">{title}</Typography>
@@ -56,8 +55,17 @@ export function RecipeDetails({
             }}
           />
         </Grid>
-        <Grid item lg={6} md={7} xs={12} sx={{display:'flex',flexDirection:'row', gap: 2}}>
-          <Grid item  sm={6} xs={12}
+        <Grid
+          item
+          lg={6}
+          md={7}
+          xs={12}
+          sx={{ display: 'flex', flexDirection: 'row', gap: 2 }}
+        >
+          <Grid
+            item
+            sm={6}
+            xs={12}
             sx={{
               display: 'flex',
               alignItems: 'stretch',
@@ -123,7 +131,10 @@ export function RecipeDetails({
               </Grid>
             )}
           </Grid>
-          <Grid item  sm={6} xs={12}
+          <Grid
+            item
+            sm={6}
+            xs={12}
             sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}
           >
             {dishTypes?.length > 0 && (
