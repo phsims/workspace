@@ -27,6 +27,7 @@ export interface HeaderProps {
   headerNav: NavProps[];
   title: string;
   titleColor?: string;
+  auth?: ReactNode;
 }
 
 export function Header({
@@ -34,6 +35,7 @@ export function Header({
   title,
   titleColor = 'primary',
   logo = null,
+  auth = null,
 }: HeaderProps) {
   const router = useRouter();
   const [open, setOpen] = useState(false);
@@ -45,7 +47,7 @@ export function Header({
   const handleNavClick = (href: string) => {
     router.push(href);
     setOpen(false);
-  }
+  };
 
   return (
     <>
@@ -93,6 +95,7 @@ export function Header({
                 {title}
               </Typography>
             </Button>
+            {auth}
           </Toolbar>
         </Container>
       </AppBar>
