@@ -2,20 +2,17 @@ import { Suspense } from 'react';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import { auth } from './auth';
 
-import { useSession, SessionProvider } from 'next-auth/react';
+import {SessionProvider } from 'next-auth/react';
 
 import CssBaseline from '@mui/material/CssBaseline';
 import {
   CustomThemeProvider,
   Header,
-  Button,
   LocalDiningRoundedIcon,
   DescriptionRoundedIcon,
-  Box,
 } from '@workspace/components';
 
 import Loading from './loading';
-import AuthComponent from './components/AuthComponent/AuthComponent';
 import SignIn from './components/SignIn/SignIn';
 import SignOut from './components/SignOut/SignOut';
 

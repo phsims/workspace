@@ -1,3 +1,5 @@
+import DescriptionRoundedIcon from '@mui/icons-material/DescriptionRounded';
+import LocalDiningRoundedIcon from '@mui/icons-material/LocalDiningRounded';
 export * from './lib/atoms/FillIcon/FillIcon';
 export * from './lib/atoms/InfoIcon/InfoIcon';
 export * from './lib/atoms/TagComponent/TagComponent';
@@ -27,6 +29,4 @@ export * from './lib/types';
 //  mui components
 export { Box } from '@mui/material';
 export { Button } from '@mui/material';
-import DescriptionRoundedIcon from '@mui/icons-material/DescriptionRounded';
-import LocalDiningRoundedIcon from '@mui/icons-material/LocalDiningRounded';
 export { LocalDiningRoundedIcon, DescriptionRoundedIcon };

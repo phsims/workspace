@@ -57,7 +57,8 @@ export function Header({
         sx={{ p: ' 1rem 0', flexGrow: 1 }}
       >
         <Container>
-          <Toolbar>
+          <Toolbar sx={{justifyContent:'space-between'}}>
+            <Box sx={{ flex: 1, display: 'flex', justifyContent: 'flex-start' }}>
             {headerNav && (
               <IconButton
                 edge="start"
@@ -69,6 +70,7 @@ export function Header({
                 <MenuRoundedIcon sx={{ height: '28px', width: '28px' }} />
               </IconButton>
             )}
+            </Box>
 
             <Button
               onClick={() => {
@@ -95,7 +97,9 @@ export function Header({
                 {title}
               </Typography>
             </Button>
+            <Box sx={{ flex: 1, display: 'flex', justifyContent: 'flex-end' }}>
             {auth}
+            </Box>
           </Toolbar>
         </Container>
       </AppBar>
