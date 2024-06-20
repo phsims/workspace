@@ -27,6 +27,7 @@ export interface HeaderProps {
   headerNav: NavProps[];
   title: string;
   titleColor?: string;
+  auth?: ReactNode;
 }
 
 export function Header({
@@ -34,6 +35,7 @@ export function Header({
   title,
   titleColor = 'primary',
   logo = null,
+  auth = null,
 }: HeaderProps) {
   const router = useRouter();
   const [open, setOpen] = useState(false);
@@ -45,7 +47,7 @@ export function Header({
   const handleNavClick = (href: string) => {
     router.push(href);
     setOpen(false);
-  }
+  };
 
   return (
     <>
@@ -55,7 +57,8 @@ export function Header({
         sx={{ p: ' 1rem 0', flexGrow: 1 }}
       >
         <Container>
-          <Toolbar>
+          <Toolbar sx={{justifyContent:'space-between'}}>
+            <Box sx={{ flex: 1, display: 'flex', justifyContent: 'flex-start' }}>
             {headerNav && (
               <IconButton
                 edge="start"
@@ -67,6 +70,7 @@ export function Header({
                 <MenuRoundedIcon sx={{ height: '28px', width: '28px' }} />
               </IconButton>
             )}
+            </Box>
 
             <Button
               onClick={() => {
@@ -93,6 +97,9 @@ export function Header({
                 {title}
               </Typography>
             </Button>
+            <Box sx={{ flex: 1, display: 'flex', justifyContent: 'flex-end' }}>
+            {auth}
+            </Box>
           </Toolbar>
         </Container>
       </AppBar>

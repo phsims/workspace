@@ -1,12 +1,20 @@
 import { Suspense } from 'react';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
+import { auth } from './auth';
+
+import {SessionProvider } from 'next-auth/react';
 
 import CssBaseline from '@mui/material/CssBaseline';
-import { CustomThemeProvider, Header } from '@workspace/components';
-import LocalDiningRoundedIcon from '@mui/icons-material/LocalDiningRounded';
-import DescriptionRoundedIcon from '@mui/icons-material/DescriptionRounded';
-import Loading from './loading';
+import {
+  CustomThemeProvider,
+  Header,
+  LocalDiningRoundedIcon,
+  DescriptionRoundedIcon,
+} from '@workspace/components';
 
+import Loading from './loading';
+import SignIn from './components/SignIn/SignIn';
+import SignOut from './components/SignOut/SignOut';
 
 export const metadata = {
   title: 'Welcome to plan-my-plate',
@@ -17,31 +25,38 @@ const navItems = [
   { label: 'Recipes', href: '/recipes', icon: <DescriptionRoundedIcon /> },
 ];
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const session = await auth();
   return (
     <html lang="en">
       <body>
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
           <CustomThemeProvider theme="pink">
             <CssBaseline />
-            <Header
-              titleColor="grey"
-              headerNav={navItems}
-              title={'Plan My Plate'}
-              logo={
-                <LocalDiningRoundedIcon
-                  color="primary"
-                  sx={{ fontSize: '4rem' }}
-                />
-              }
-            />
-            <Suspense fallback={<Loading />}>
-              {children}
-            </Suspense>
+            <SessionProvider>
+              <Header
+                titleColor="grey"
+                headerNav={navItems}
+                title={'Plan My Plate'}
+                logo={
+                  <LocalDiningRoundedIcon
+                    color="primary"
+                    sx={{ fontSize: '4rem' }}
+                  />
+                }
+                auth={
+                  <>
+                    {session && <SignOut />}
+                    {!session && <SignIn />}
+                  </>
+                }
+              ></Header>
+              <Suspense fallback={<Loading />}>{children}</Suspense>
+            </SessionProvider>
           </CustomThemeProvider>
         </AppRouterCacheProvider>
       </body>
