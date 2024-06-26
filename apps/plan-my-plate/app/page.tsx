@@ -4,7 +4,7 @@ import { Container, Grid, Typography } from '@mui/material';
 import { Banner, HeaderBanner, HeaderBannerProps } from '@workspace/components';
 import { FeatureCard, FeatureCardProps } from '@workspace/components';
 
-import { features } from './utils/data/features';
+import { features } from './data/features';
 
 const headerBannerContent: HeaderBannerProps = {
   h1_Headline: true,
@@ -18,6 +18,7 @@ const headerBannerContent: HeaderBannerProps = {
     alt: 'From Pantry to Plate, Perfectly Planned',
   },
 };
+
 export default function Index() {
   return (
     <>

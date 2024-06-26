@@ -1,7 +1,9 @@
-import { getImage } from './getImage';
+import { getImage } from '../getImage';
+
 
 jest.mock('../middleware/setup');
 describe('getImage', () => {
+
   it('should return the correct image url', () => {
     const id = 12345;
     const size = 'small';

@@ -23,7 +23,7 @@ import {
   getRecipe,
   getImage,
   getSimilarRecipes,
-} from '../../utils';
+} from '@spoonacular-api';
 import styles from './page.module.scss';
 
 export interface IdProps {

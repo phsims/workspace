@@ -1,5 +1,5 @@
 import { Nutrient } from '@workspace/components';
-import { getSpoonConfig } from '../middleware/setup';
+import { getSpoonConfig } from './middleware/setup';
 
 export async function getNutrition(id: number) {
   const { baseUrl, headers } = getSpoonConfig();

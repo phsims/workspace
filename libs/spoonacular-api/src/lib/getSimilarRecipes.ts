@@ -1,6 +1,15 @@
-import { ShortRecipe } from '@workspace/components';
-import { getSpoonConfig } from '../middleware/setup';
+import { getSpoonConfig } from './middleware/setup';
 import { getImage } from './getImage';
+
+interface ShortRecipe {
+  id: number;
+  title: string;
+  imageType: string;
+  readyInMinutes?: number;
+  servings: number;
+  sourceUrl: string;
+  image?: string;
+}
 
 export async function getSimilarRecipes(id: number) {
   const { baseUrl, headers } = getSpoonConfig();

@@ -1,11 +1,10 @@
-import { getRandomRecipes } from './getRandomRecipes';
+import { getRecipe } from '../getRecipe';
 import fetchMock from 'jest-fetch-mock';
-import { mockRecipes } from '@workspace/components';
-
+import { mockRecipes } from '../testData/mockRecipes';
 
 jest.mock('../middleware/setup');
 
-describe('getRandomRecipes', () => {
+describe('getRecipe', () => {
   beforeEach(() => {
     global.fetch = jest.fn().mockResolvedValue({
       ok: true,
@@ -19,7 +18,7 @@ describe('getRandomRecipes', () => {
   it('should return the correct data', async () => {
     fetchMock.mockResponseOnce(JSON.stringify(mockRecipes));
 
-    const result = await getRandomRecipes();
+    const result = await getRecipe(12345);
     expect(result).toEqual(mockRecipes);
   });
-} );
+});

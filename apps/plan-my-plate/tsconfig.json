@@ -11,6 +11,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "incremental": true,
+    "paths":{
+      "@spoonacular-api": ["libs/spoonacular-api/src/index.ts"],
+      "@workspace/components": ["libs/components/src/index.ts"],
+    },
     "plugins": [
       {
         "name": "next"

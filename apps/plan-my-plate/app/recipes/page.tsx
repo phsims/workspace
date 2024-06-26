@@ -5,7 +5,7 @@ import {
   Banner,
   RecipeCardGrid,
 } from '@workspace/components';
-import { getRandomRecipes } from '../utils';
+import { getRandomRecipes } from '@spoonacular-api';
 
 export default async function Recipes() {
   const data = await getRandomRecipes();
