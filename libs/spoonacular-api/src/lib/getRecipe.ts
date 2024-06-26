@@ -1,4 +1,4 @@
-import { getSpoonConfig } from '../middleware/setup';
+import { getSpoonConfig } from './middleware/setup';
 
 export async function getRecipe(id: number) {
   const { baseUrl, headers } = getSpoonConfig();

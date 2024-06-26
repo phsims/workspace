@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@spoonacular-api": ["libs/spoonacular-api/src/index.ts"],
       "@workspace/components": ["libs/components/src/index.ts"],
       "@workspace/components/server": ["libs/components/src/server.ts"]
     }

@@ -1,9 +1,9 @@
-import { getSimilarRecipes } from './getSimilarRecipes';
+import { getSimilarRecipes } from '../getSimilarRecipes';
 import fetchMock from 'jest-fetch-mock';
-import { mockRecipes } from '@workspace/components';
+import { mockRecipes } from '../testData/mockRecipes';
 
 jest.mock('../middleware/setup');
-jest.mock('./getImage', () => ({
+jest.mock('../getImage', () => ({
   getImage: () => 'https://img.spoonacular.com/recipes/632778-556x370.jpg',
 }));
 

@@ -1,19 +1,14 @@
-import { getNutrition } from './getNutrition';
+import { getNutrition } from '../getNutrition';
 import fetchMock from 'jest-fetch-mock';
+import { mockNutrition } from '../testData/mockNutrients';
 
 jest.mock('../middleware/setup');
-const mockResponse = {
-  calories: '100',
-  carbs: '20',
-  fat: '10',
-  protein: '5',
-};
 
 describe('getNutrition', () => {
   beforeEach(() => {
     global.fetch = jest.fn().mockResolvedValue({
       ok: true,
-      json: jest.fn().mockResolvedValue(mockResponse),
+      json: jest.fn().mockResolvedValue(mockNutrition),
     });
   });
   afterEach(() => {
@@ -30,7 +25,7 @@ describe('getNutrition', () => {
       { name: 'protein', value: '5' },
     ];
 
-    fetchMock.mockResponseOnce(JSON.stringify(mockResponse));
+    fetchMock.mockResponseOnce(JSON.stringify(mockNutrition));
 
     const result = await getNutrition(id);
     expect(result).toEqual(expected);

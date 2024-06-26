@@ -1,6 +1,6 @@
-import { getSpoonConfig } from '../middleware/setup';
+import { getSpoonConfig } from './middleware/setup';
 
-import { Sizes } from '../types';
+import { Sizes } from './types';
 
 
 export function getImage(id: number, size: keyof typeof Sizes) {
