@@ -1,10 +1,10 @@
 import { getSpoonConfig } from './middleware/setup';
 
-import { Sizes } from './types';
+import { ImageSizeTypes } from './types';
 
 
-export function getImage(id: number, size: keyof typeof Sizes) {
+export function getImage(id: number, size: keyof typeof ImageSizeTypes) {
   const { imgUrl } = getSpoonConfig();
 
-  return `${imgUrl}/recipes/${id}-${Sizes[size]}.jpg`;
+  return `${imgUrl}/recipes/${id}-${ImageSizeTypes[size]}.jpg`;
 }
