@@ -1,14 +1,14 @@
 import { getSpoonConfig } from './middleware/setup';
-import { CourseType } from './types';
+import { CourseType,DietType ,IntoleranceType,CuisineType} from './types';
 
 export interface queryParams {
   query: string;
   number: number;
   options?: {
-    cuisine?: string;
-    excludeCuisine?: string;
-    diet?: string;
-    intolerances?: string;
+    cuisine?: CuisineType;
+    excludeCuisine?: CuisineType;
+    diet?: DietType;
+    intolerances?: IntoleranceType;
     includeIngredients?: string;
     excludeIngredients?: string;
     type?: CourseType;
