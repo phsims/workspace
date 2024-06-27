@@ -8,7 +8,7 @@ describe('getRecipe', () => {
   beforeEach(() => {
     global.fetch = jest.fn().mockResolvedValue({
       ok: true,
-      json: jest.fn().mockResolvedValue(mockRecipes),
+      json: jest.fn().mockResolvedValue(mockRecipes.recipes[0]),
     });
   });
   afterEach(() => {
@@ -16,9 +16,9 @@ describe('getRecipe', () => {
   });
 
   it('should return the correct data', async () => {
-    fetchMock.mockResponseOnce(JSON.stringify(mockRecipes));
+
 
     const result = await getRecipe(12345);
-    expect(result).toEqual(mockRecipes);
+    expect(result).toEqual(mockRecipes.recipes[0]);
   });
 });

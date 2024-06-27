@@ -1,4 +1,4 @@
-import { Nutrient } from './Nutrient';
+import { Nutrient } from './Nutrient.interface';
 
 export interface Recipe extends ShortRecipe {
   sourceName: string;
