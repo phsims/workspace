@@ -15,7 +15,7 @@ export interface FeatureCardProps {
   title: string;
   description: string;
   image: string;
-  link: string;
+  link?: string;
 }
 
 export function FeatureCard({
@@ -54,14 +54,24 @@ export function FeatureCard({
         </Typography>
       </CardContent>
       <CardActions sx={{ mt: 'auto', justifyContent: 'center' }}>
-        <Button
-          variant="text"
-          onClick={() => router.push(link)}
-          sx={{ fontSize: 'large', textTransform: 'none' }}
-          endIcon={<ArrowForwardIosRoundedIcon fontSize="small" />}
-        >
-          Learn more
-        </Button>
+        {link ? (
+          <Button
+            variant="text"
+            onClick={() => router.push(link)}
+            sx={{ fontSize: 'large', textTransform: 'none' }}
+            endIcon={<ArrowForwardIosRoundedIcon fontSize="small" />}
+          >
+            Learn more
+          </Button>
+        ) : (
+          <Button
+            variant="text"
+            sx={{ fontSize: 'large', textTransform: 'none' }}
+            endIcon={<ArrowForwardIosRoundedIcon fontSize="small" />}
+          >
+            Coming soon
+          </Button>
+        )}
       </CardActions>
     </Card>
   );

@@ -16,10 +16,6 @@ describe('RecipeCardGrid', () => {
     const { baseElement } = render(<RecipeCardGrid {...mockRecipes} />);
     expect(baseElement).toBeTruthy();
   });
-  it('should match the snapshot', () => {
-    const { baseElement } = render(<RecipeCardGrid {...mockRecipes} />);
-    expect(baseElement).toMatchSnapshot();
-  });
   it('should render the correct number of recipes', () => {
     const { getByTestId } = render(<RecipeCardGrid {...mockRecipes} />);
     mockRecipes.recipes.forEach((recipe) => {

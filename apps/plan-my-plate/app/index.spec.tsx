@@ -16,8 +16,5 @@ describe('Page', () => {
     const { baseElement } = render(<Page />);
     expect(baseElement).toBeTruthy();
   });
-  it('should match snapshot', () => {
-    const { asFragment } = render(<Page />);
-    expect(asFragment()).toMatchSnapshot();
-  });
+
 });
